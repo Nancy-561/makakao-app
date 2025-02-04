@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AuthLayout = ({ children }) => {
+export const AuthLayout = ({ children, showTNC = false }) => {
   return (
     <main className="flex h-screen">
       <div className="relative w-3/5 h-full">
@@ -17,7 +17,28 @@ export const AuthLayout = ({ children }) => {
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="w-2/5 h-full">{children}</div>
+      <div
+        className={
+          showTNC
+            ? "bg-[#F9F8F3] w-2/5 h-full flex flex-col justify-center"
+            : "w-2/5 h-full"
+        }
+      >
+        {showTNC ? (
+          <div className="bg-[#FFFFFF] p-4 rounded-[16px] w-[80%] mx-auto shadow-custom">
+            {children}
+          </div>
+        ) : (
+          children
+        )}
+        {showTNC && (
+          <div className="flex gap-[24px] pt-4 justify-center font-semibold text-[#607B88]">
+            <span>Terms</span>
+            <span>Plans</span>
+            <span>Contact Us</span>
+          </div>
+        )}
+      </div>
     </main>
   );
 };

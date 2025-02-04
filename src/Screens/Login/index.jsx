@@ -1,14 +1,23 @@
 import React, { useState } from "react";
-import { AuthLayout } from "../../Layout/AuthLayout";
+import { useNavigate } from 'react-router-dom';
+
 import { LoginForm } from "./LoginForm";
 import { Button } from "../../Components/Button";
+import { AuthLayout } from "../../Layout/AuthLayout";
 
 export const Login = () => {
+  const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
     setShowLogin(!showLogin);
+  };
+
+  const handleRedirect = () => {
+    if (!showLogin) {
+      navigate('/signup');
+    }
   };
 
   return (
@@ -23,7 +32,7 @@ export const Login = () => {
         {showLogin && <LoginForm />}
         <div className="w-full">
           <div className="font-century-gothic text-lg font-bold leading-[24px] mb-3">
-            Continue with{" "}
+            Continue with
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 w-full mb-5">
             <Button
@@ -59,6 +68,7 @@ export const Login = () => {
           <Button
             btnText={showLogin ? "Login" : "Continue with Email"}
             btnId="login-btn"
+            handleClick={handleRedirect}
           />
           <div className="font-inter text-lg leading-[21.78px] mt-4 text-gray-500 mb-8">
             {showLogin ? "Don’t have account? " : "Already have an account? "}

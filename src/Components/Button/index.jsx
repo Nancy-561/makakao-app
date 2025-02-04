@@ -5,7 +5,6 @@ export const Button = ({
   btnId,
   handleClick = () => {},
   btnClassName = "",
-  bgColor = "",
   type = "button",
 }) => {
   return (

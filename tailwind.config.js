@@ -11,6 +11,9 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
         'poppins': ['Poppins', 'sans-serif'],
       },
+      boxShadow: {
+        'custom': '0px 4px 40px 3.2px rgba(0, 0, 0, 0.12)', // Adjust the color as needed
+      },
     },
   },
   plugins: [],

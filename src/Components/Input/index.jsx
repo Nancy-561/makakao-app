@@ -1,8 +1,14 @@
 import { StyledInput } from "./Input.style";
 
-export const Input = ({ text, inputId, placeholder, type = "text" }) => {
+export const Input = ({
+  text,
+  inputId,
+  placeholder,
+  handleChange = () => {},
+  type = "text",
+}) => {
   return (
-    <StyledInput className="mb-4 text-left">
+    <StyledInput className="mb-3 text-left">
       <label className="font-inter mb-2" htmlFor={inputId}>
         {text}
       </label>
@@ -11,6 +17,7 @@ export const Input = ({ text, inputId, placeholder, type = "text" }) => {
         id={inputId}
         type={type}
         placeholder={placeholder}
+        onChange={handleChange}
       />
     </StyledInput>
   );
