@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import styled from "styled-components";
 import { FaCalendarAlt, FaLock } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -7,6 +7,10 @@ import { Input } from "../../Components/Input";
 import { ProfileContainer,ProfileHeader,ProfileImage,LockIcon,InputContainer,Select } from "./MyAccount.styles";
 
 export const MyProfile = () => {
+    const [editable,setEditable]=useState(true);
+    const handleClick=()=>{
+        setEditable(!editable);
+    }
     return (
         <ProfileContainer>
             <ProfileHeader>
@@ -21,23 +25,23 @@ export const MyProfile = () => {
                 <Input
                     inputId="fullname"
                     text="Full Name"
-                    readOnly={true}
+                    readOnly={editable}
                 />
                 <Input
                     inputId="email"
                     text="Email Address"
                     type="email"
-                    readOnly={true}
+                    readOnly={editable}
                 />
                 <Input
                     inputId="dateofbirth"
                     text="Date of Birth"
-                    readOnly={true}
+                    readOnly={editable}
                     type="date"
                 />
                 <InputContainer>
                     <label>Gender</label>
-                    <Select disabled>
+                    <Select disabled={editable}>
                         <option>Male</option>
                         <option>Female</option>
                     </Select>
@@ -45,10 +49,10 @@ export const MyProfile = () => {
                 <Input
                     inputId="phonenumber"
                     text="Phone Number" 
-                    readOnly={true}
+                    readOnly={editable}
                 />
             </div>
-            <Button btnText="Edit Profile" btnId="profile-button" btnClassName="secondary-btn max-w-[30%] flex justify-around ml-[15px]" />
+            <Button btnText="Edit Profile" btnId="profile-button" btnClassName="secondary-btn max-w-[30%] flex justify-around ml-[15px]" handleClick={handleClick}/>
         </ProfileContainer>
     );
 };
