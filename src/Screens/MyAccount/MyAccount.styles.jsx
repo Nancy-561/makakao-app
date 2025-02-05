@@ -83,3 +83,74 @@ export const Select = styled.select`
   border: none;
   width: 100%;
 `;
+
+
+export const Container = styled.div`
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+`;
+
+export const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  max-width: 90%;
+  margin: auto;
+`;
+
+export const Title = styled.h2`
+  font-size: 18px;
+  font-weight: bold;
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
+export const Dropdown = styled.select`
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: black;
+  color: white;
+`;
+
+export const SearchBox = styled.div`
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #f9f9f9;
+`;
+
+export const SearchInput = styled.input`
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-left: 5px;
+`;
+
+export const TrackButton = styled.button`
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+`;
+
+export const OrderInfo = styled.p`
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px 0px;
+  text-align: left;
+`;
