@@ -3,7 +3,7 @@ import { FaBox, FaGavel, FaHeart, FaMapMarkerAlt, FaHeadset, FaSignOutAlt, FaUse
 import { MyProfile } from "./MyProfile";
 import { MyOrders } from "./MyOrders";
 import { MyBids } from "./MyBids";
-import { Wishlist } from "./WishList";
+import { WishList } from "./WishList";
 
 import { MenuTitle, MenuItem, Sidebar } from "./MyAccount.styles";
 
@@ -111,7 +111,7 @@ export const MyAccount = () => {
                         {showProfile && <MyProfile />}
                         {showOrder && <MyOrders />}
                         {showBids && <MyBids />}
-                        {showWishlist && <Wishlist />}
+                        {showWishlist && <WishList/>}
                     </div>
                 </div>
             </div>
