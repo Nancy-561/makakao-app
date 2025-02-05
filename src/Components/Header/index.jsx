@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiSearch, FiShoppingCart, FiShoppingBag } from "react-icons/fi";
 import { GoPerson } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
@@ -9,14 +9,16 @@ import { navTabs } from "../../Mocks/productMock";
 import { HeaderWrapper, Nav, SearchBar } from "./Header.styles";
 
 export const Header = ({ isLoggedIn, count }) => {
+  const navigate = useNavigate();
   return (
     <>
-      <HeaderWrapper className="flex items-center justify-between p-2 md:p-0 bg-white mb-2">
+      <HeaderWrapper className="flex items-center justify-between p-2 md:p-0 bg-white">
         <div className="flex items-center gap-4">
           <img
             src="/makakao-logo.png"
             alt="makakao-logo"
             className="h-[100px] hidden md:block"
+            onClick={() => navigate("/")}
           />
           <SearchBar className="bg-[#F5F5F5]">
             <input
@@ -63,7 +65,7 @@ export const Header = ({ isLoggedIn, count }) => {
       <Nav className="md:justify-center">
         {navTabs.map(({ name, id }) => (
           <Link
-            to={`/productListing?category=${id}`}
+            to={`/product-listing?category=${id}`}
             key={id}
             className="font-poppins inline-block whitespace-nowrap"
           >

@@ -26,4 +26,12 @@ export const StyledButton = styled.button`
   &.secondary-btn {
     background-color: #2d313e;
   }
+
+  &.bg-navy-btn {
+    background-color: #026080
+  }
+
+  &.bg-black-btn {
+    background-color: #000000
+  }
 `;
