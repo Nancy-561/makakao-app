@@ -1,12 +1,18 @@
 import styled from "styled-components";
 import { FaLock } from "react-icons/fa";
 
+export const StyledAccountContainer = styled.div`
+  border-right: 1px solid lightgray; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+`
+
 export const Sidebar = styled.div`
-  width: 250px;
+  min-width: 20%;
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid lightgray; 
 `;
 
 export const MenuItem = styled.div`
@@ -14,7 +20,6 @@ export const MenuItem = styled.div`
   align-items: center;
   gap: 10px;
   padding: 10px 15px;
-  border-radius: 8px;
   font-weight: 500;
   color: gray;
   cursor: pointer;
@@ -36,12 +41,14 @@ export const MenuTitle = styled.p`
   font-weight: bold;
   color: #999;
   margin-bottom: 10px;
+  text-align: left;
+  padding: 0 15px;
 `;
 
 export const ProfileContainer = styled.div`
   padding: 20px;
   border-radius: 10px;
-  max-width: 70%
+  max-width: 80%
 `;
 
 export const ProfileHeader = styled.div`
@@ -73,6 +80,7 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+  text-align: left;
 `;
 
 
@@ -88,8 +96,6 @@ export const Select = styled.select`
 export const Container = styled.div`
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 `;
 
 export const Header = styled.div`
@@ -111,8 +117,8 @@ export const Actions = styled.div`
 `;
 
 export const Dropdown = styled.select`
-  padding: 8px;
-  border-radius: 5px;
+  padding: 10px;
+  border-radius: 14px;
   border: 1px solid #ddd;
   background: black;
   color: white;
@@ -121,17 +127,18 @@ export const Dropdown = styled.select`
 export const SearchBox = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid #ddd;
-  padding: 5px 10px;
-  border-radius: 5px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
   background: #f9f9f9;
+  justify-content: space-between;
+  padding: 5px 10px;
 `;
 
 export const SearchInput = styled.input`
   border: none;
   outline: none;
   background: transparent;
-  margin-left: 5px;
+  padding: 5px;
 `;
 
 export const TrackButton = styled.button`
@@ -141,13 +148,14 @@ export const TrackButton = styled.button`
   border-radius: 5px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 5px;
   cursor: pointer;
+  min-width: 20%;
 `;
 
 export const OrderInfo = styled.p`
   font-size: 14px;
-  font-weight: bold;
   margin-bottom: 10px;
   padding: 10px 0px;
   text-align: left;

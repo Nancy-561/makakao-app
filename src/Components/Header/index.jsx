@@ -67,7 +67,7 @@ export const Header = ({ isLoggedIn, count }) => {
           <Link
             to={`/product-listing?category=${id}`}
             key={id}
-            className="font-poppins inline-block whitespace-nowrap"
+            className="font-poppins inline-block whitespace-nowrap p-[14px]"
           >
             {name}
           </Link>
