@@ -11,12 +11,12 @@ import { HeaderWrapper, Nav, SearchBar } from "./Header.styles";
 export const Header = ({ isLoggedIn, count }) => {
   return (
     <>
-      <HeaderWrapper className="flex items-center justify-between gap-4 bg-white mb-2">
+      <HeaderWrapper className="flex items-center justify-between p-2 md:p-0 bg-white mb-2">
         <div className="flex items-center gap-4">
           <img
             src="/makakao-logo.png"
             alt="makakao-logo"
-            className="h-[100px]"
+            className="h-[100px] hidden md:block"
           />
           <SearchBar className="bg-[#F5F5F5]">
             <input
@@ -27,9 +27,10 @@ export const Header = ({ isLoggedIn, count }) => {
             <FiSearch className="mx-2 h-[24px] w-[24px]" />
           </SearchBar>
         </div>
-        <div className="flex items-center gap-4 px-8">
+        <div className="flex items-center gap-1 md:gap-4 md:px-8">
           <a href="#" className="flex items-center gap-1 sell-btn">
-            <FiShoppingCart className="h-[24px] w-[24px]" /> Sell
+            <FiShoppingCart className="h-[24px] w-[24px]" />
+            <span className="hidden md:block">Sell</span>
           </a>
           {isLoggedIn ? (
             <>
@@ -47,8 +48,9 @@ export const Header = ({ isLoggedIn, count }) => {
                 to="/my-account"
                 className="flex items-center gap-4 user-btn"
               >
-                <IoPersonCircleOutline className="h-[36px] w-[36px]" /> James{" "}
-                <IoIosArrowDown className="mr-3" />
+                <IoPersonCircleOutline className="h-[36px] w-[36px]" />
+                <span className="hidden md:block">James</span>
+                <IoIosArrowDown className="mr-3 hidden md:block" />
               </Link>
             </>
           ) : (
@@ -58,12 +60,12 @@ export const Header = ({ isLoggedIn, count }) => {
           )}
         </div>
       </HeaderWrapper>
-      <Nav>
+      <Nav className="md:justify-center">
         {navTabs.map(({ name, id }) => (
           <Link
             to={`/productListing?category=${id}`}
             key={id}
-            className="font-poppins"
+            className="font-poppins inline-block whitespace-nowrap"
           >
             {name}
           </Link>

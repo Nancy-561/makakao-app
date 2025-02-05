@@ -48,12 +48,13 @@ export const HeaderWrapper = styled.header`
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: center;
+  align-items: center;
   gap: 20px;
   background-color: #3f4254;
   color: white;
   box-shadow: 0px 10px 60px 0px #0000001a;
   padding: 14px;
+  overflow-x: scroll;
 
   a {
     color: white;

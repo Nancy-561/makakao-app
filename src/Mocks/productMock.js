@@ -146,3 +146,23 @@ export const navTabs = [
   { name: "Cosmetics", id: "cosmetics" },
   { name: "Antiques", id: "antiques" },
 ];
+
+export const categoryMap = [
+  { name: "Clothing", id: "clothing" },
+  { name: "Eyewear", id: "eyewear" },
+  { name: "Watches", id: "watches" },
+  { name: "Furniture", id: "furniture" },
+  { name: "Beauty", id: "beauty" },
+  { name: "Gifts", id: "gifts" },
+];
+
+export const linksMap1 = [
+  { name: "Our Contacts", id: "contacts" },
+  { name: "Delivery & Return", id: "delivery" },
+  { name: "Outlet", id: "outlet" },
+];
+
+export const linksMap2 = [
+  { name: "Blog", id: "blog" },
+  { name: "Stores", id: "stores" },
+];
