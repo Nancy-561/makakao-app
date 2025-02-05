@@ -1,26 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import { Input } from "../../Components/Input";
 
-export const LoginForm = () => {
-  const [Username, setUsername] = useState("");
-  const [Password, setPassword] = useState("");
-
-  console.log(Username, Password);
-
+export const LoginForm = ({handleFormUpdate, formData}) => {
   return (
     <form className="w-full">
       <Input
         inputId="username"
         placeholder="info@gmail.com"
         text="Username"
-        handleChange={(e) => setUsername(e?.target?.value)}
+        handleChange={handleFormUpdate}
+        inputClassName="white-bg-input"
+        value={formData.username}
       />
       <Input
         inputId="password"
         placeholder="********"
         type="password"
         text="Password"
-        handleChange={(e) => setPassword(e?.target?.value)}
+        handleChange={handleFormUpdate}
+        inputClassName="white-bg-input"
+        value={formData.password}
       />
       <div className="mb-4 text-right">
         <a

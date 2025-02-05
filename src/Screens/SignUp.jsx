@@ -1,8 +1,16 @@
+import React, { useState } from "react";
+
 import { Input } from "../Components/Input";
 import { Button } from "../Components/Button";
 import { AuthLayout } from "../Layout/AuthLayout";
 
 export const SignUp = () => {
+  const [formData, setFormData] = useState({});
+
+  const handleFormUpdate = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
   return (
     <AuthLayout showTNC={true}>
       <div className="text-left">
@@ -13,13 +21,40 @@ export const SignUp = () => {
         </div>
       </div>
       <div className="my-6">
-        <Input inputId="Name" text="Name" />
-        <Input inputId="Email" text="Email" type="email" />
-        <Input inputId="Password" text="Password" type="password" />
-        <Input inputId="confirm-password" text="Confirm Password" />
+        <Input
+          inputId="Name"
+          text="Name"
+          handleChange={handleFormUpdate}
+          value={formData.Name}
+        />
+        <Input
+          inputId="Email"
+          text="Email"
+          type="email"
+          handleChange={handleFormUpdate}
+          value={formData.Email}
+        />
+        <Input
+          inputId="Password"
+          text="Password"
+          type="password"
+          handleChange={handleFormUpdate}
+          value={formData.Password}
+        />
+        <Input
+          inputId="confirm-password"
+          text="Confirm Password"
+          handleChange={handleFormUpdate}
+          value={formData["confirm-password"]}
+        />
       </div>
       <div className="flex flex-col gap-[10px]">
-        <Button btnText="Sign up" btnId="signup-btn" btnClassName="secondary-btn" />
+        <Button
+          btnText="Sign up"
+          btnId="signup-btn"
+          btnClassName="secondary-btn"
+          handleClick={() => console.log(formData)}
+        />
         <Button
           btnText="Sign in with Google"
           btnId="google-signin-btn"

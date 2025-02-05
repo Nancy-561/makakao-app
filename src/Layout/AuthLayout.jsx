@@ -21,7 +21,7 @@ export const AuthLayout = ({ children, showTNC = false }) => {
         className={
           showTNC
             ? "bg-[#F9F8F3] w-2/5 h-full flex flex-col justify-center"
-            : "w-2/5 h-full"
+            : "w-2/5 h-full bg-white"
         }
       >
         {showTNC ? (

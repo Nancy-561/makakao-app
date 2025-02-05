@@ -8,6 +8,11 @@ import { AuthLayout } from "../../Layout/AuthLayout";
 export const Login = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(false);
+  const [formData, setFormData] = useState({});
+
+  const handleFormUpdate = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -32,7 +37,7 @@ export const Login = ({setIsLoggedIn}) => {
             {showLogin ? "Login" : "Create an Account"}
           </h1>
         </div>
-        {showLogin && <LoginForm />}
+        {showLogin && <LoginForm handleFormUpdate={handleFormUpdate} formData={formData} />}
         <div className="w-full">
           <div className="font-century-gothic text-lg font-bold leading-[24px] mb-3">
             Continue with

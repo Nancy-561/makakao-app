@@ -6,6 +6,9 @@ export const Input = ({
   placeholder,
   handleChange = () => {},
   type = "text",
+  inputClassName="",
+  value="",
+  readOnly=false
 }) => {
   return (
     <StyledInput className="mb-3 text-left">
@@ -13,11 +16,13 @@ export const Input = ({
         {text}
       </label>
       <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className={`shadow border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline ${inputClassName}`}
         id={inputId}
         type={type}
+        value={value}
         placeholder={placeholder}
         onChange={handleChange}
+        readOnly={readOnly}
       />
     </StyledInput>
   );

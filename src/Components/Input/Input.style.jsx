@@ -7,4 +7,12 @@ export const StyledInput = styled.div`
     font-weight: 500;
     line-height: 19.36px;
   }
+
+  input {
+    background-color: #eef1f5;
+
+    &.white-bg-input {
+      background-color: #ffffff;
+    }
+  }
 `;

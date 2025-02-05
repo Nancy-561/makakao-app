@@ -47,7 +47,7 @@ export const Footer = () => {
           <h3 className={labelClass}>Categories</h3>
           <ul className={listClass}>
             {categoryMap.map(({ name, id }) => (
-              <li>
+              <li key={id}>
                 <Link to={`/productListing?category=${id}`}>{name}</Link>
               </li>
             ))}
@@ -59,7 +59,7 @@ export const Footer = () => {
           <h3 className={labelClass}>Useful Links</h3>
           <ul className={listClass}>
             {linksMap1.map(({ name, id }) => (
-              <li>
+              <li key={id}>
                 <Link to={`/${id}`}>{name}</Link>
               </li>
             ))}
@@ -71,7 +71,7 @@ export const Footer = () => {
           <h3 className={labelClass}>Useful Links</h3>
           <ul className={listClass}>
             {linksMap2.map(({ name, id }) => (
-              <li>
+              <li key={id}>
                 <Link to={`/${id}`}>{name}</Link>
               </li>
             ))}
