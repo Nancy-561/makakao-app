@@ -1,9 +1,21 @@
-import { Button } from "./Button";
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
-export const Otp = ({ length = 6 }) => {
+import { Button } from "./Button";
+
+export const Otp = ({ length = 6, setIsLoggedIn, isSignInFlow }) => {
+  const navigate = useNavigate();
   const [otp, setOtp] = useState(Array(length).fill(""));
   const inputs = useRef([]);
+
+  const handleBtnClick = () => {
+    if (isSignInFlow) {
+      setIsLoggedIn(true);
+      navigate("/");
+    } else {
+      navigate("/login?showLoginForm=true");
+    }
+  };
 
   const handleChange = (e, index) => {
     const { value } = e.target;
@@ -19,21 +31,22 @@ export const Otp = ({ length = 6 }) => {
         inputs.current[index + 1].focus();
       }
     }
-
-    // Move focus to previous input on backspace
-    if (value === "" && index > 0) {
-      inputs.current[index - 1].focus();
-    }
   };
 
   const handleKeyDown = (e, index) => {
-    if (e.key === "Backspace" && otp[index] === "") {
+    if (e.key === "Backspace") {
       // Move focus to previous input on backspace if current input is empty
+      const newOtp = [...otp];
+      console.log(newOtp, index)
+      newOtp[index] = "";
+      setOtp(newOtp);
+
       if (index > 0) {
         inputs.current[index - 1].focus();
       }
     }
   };
+
   return (
     <div className="flex flex-col gap-[21.59px]">
       <div className="grid grid-cols-6 gap-1 w-full mb-5">
@@ -54,6 +67,7 @@ export const Otp = ({ length = 6 }) => {
         btnText="Verify"
         btnId="verify-btn"
         btnClassName="secondary-btn"
+        handleClick={handleBtnClick}
       />
     </div>
   );

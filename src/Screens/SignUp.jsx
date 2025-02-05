@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Input } from "../Components/Input";
 import { Button } from "../Components/Button";
 import { AuthLayout } from "../Layout/AuthLayout";
 
 export const SignUp = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({});
 
   const handleFormUpdate = (e) => {
@@ -17,7 +19,7 @@ export const SignUp = () => {
         <div className="text-[25.6px]">Create an account</div>
         <div className="font-semibold text-[14.4px]">
           <span className="text-[#A7A8BB]">Already have an account?</span>{" "}
-          <a href="/login">Login</a>
+          <a href="/login?showLoginForm=true">Login</a>
         </div>
       </div>
       <div className="my-6">
@@ -53,10 +55,19 @@ export const SignUp = () => {
           btnText="Sign up"
           btnId="signup-btn"
           btnClassName="secondary-btn"
-          handleClick={() => console.log(formData)}
+          handleClick={() => navigate("/Verify")}
         />
         <Button
-          btnText="Sign in with Google"
+          btnText={
+            <>
+              <img
+                src="/google.png"
+                alt="google-logo"
+                className="mr-2 h-[16px] w-[16px]"
+              />
+              Sign in with Google
+            </>
+          }
           btnId="google-signin-btn"
           btnClassName="google-btn"
         />

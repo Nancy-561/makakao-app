@@ -1,7 +1,7 @@
 import { AuthLayout } from "../Layout/AuthLayout";
 import { Otp } from "../Components/Otp";
 
-export const Verify = () => {
+export const Verify = (props) => {
     return (
         <AuthLayout showTNC={true}>
             <div className="w-[90%] m-auto flex justify-around flex-col gap-[25px] p-[25px]">
@@ -13,7 +13,7 @@ export const Verify = () => {
                         <div className="text-[21.06px] font-black">Verify your email</div>
                         <div>Please enter 6 digit code we just sent to alexbrown@technovade.com</div>
                     </div>
-                    <Otp />
+                    <Otp {...props} />
                 </div>
             </div>
         </AuthLayout>

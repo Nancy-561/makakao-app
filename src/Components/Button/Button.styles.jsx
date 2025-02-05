@@ -5,6 +5,9 @@ export const StyledButton = styled.button`
   width: 100%;
   color: #fff;
   background-color: #4285f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.login-btn {
     background-color: #fff;

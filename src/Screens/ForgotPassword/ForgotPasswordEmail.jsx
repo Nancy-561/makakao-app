@@ -31,7 +31,7 @@ export const ForgotPasswordEmail = ({ email, updateShowOTP, updateEmail }) => {
           btnClassName="secondary-btn"
           handleClick={handleOTP}
         />
-        <a href="/login">Back to Login</a>
+        <a href="/login?showLoginForm=true">Back to Login</a>
       </div>
     </div>
   );

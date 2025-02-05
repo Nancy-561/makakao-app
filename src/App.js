@@ -21,7 +21,7 @@ function App() {
           </Route>
           <Route path="/login" element={<Login setIsLoggedIn={() => setIsLoggedIn(true)}/>} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/verify" element={<Verify/>} />
+          <Route path="/verify" element={<Verify setIsLoggedIn={() => setIsLoggedIn(true)} isSignInFlow={true} />} />
           <Route path="/forgot-password" element={<ForgotPassword/>} />
         </Routes>
       </div>
