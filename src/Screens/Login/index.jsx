@@ -5,7 +5,7 @@ import { LoginForm } from "./LoginForm";
 import { Button } from "../../Components/Button";
 import { AuthLayout } from "../../Layout/AuthLayout";
 
-export const Login = () => {
+export const Login = ({setIsLoggedIn}) => {
   const navigate = useNavigate();
   const [showLogin, setShowLogin] = useState(false);
 
@@ -17,6 +17,9 @@ export const Login = () => {
   const handleRedirect = () => {
     if (!showLogin) {
       navigate('/signup');
+    } else {
+      setIsLoggedIn(true);
+      navigate('/');
     }
   };
 
