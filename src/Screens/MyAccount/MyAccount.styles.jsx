@@ -97,8 +97,6 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  max-width: 90%;
-  margin: auto;
 `;
 
 export const Title = styled.h2`

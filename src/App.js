@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { MainLayout } from './Layout/MainLayout';
 import { Login, SignUp, Verify, ForgotPassword,MyAccount } from './Screens';
 import './App.css';
-import { MyOrders } from './Screens/MyAccount/MyOrders';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

@@ -38,7 +38,7 @@ export const MyOrders = () => {
 
                 </Actions>
             </Header>
-            <div className="flex justify-between max-w-[90%] m-auto py-4">
+            <div className="flex justify-between py-4">
                 <OrderInfo>Order ID: <strong>FL09876567</strong> 06 Feb 2024</OrderInfo>
                 <TrackButton>
                         Track order <FaChevronRight />
