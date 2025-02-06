@@ -17,4 +17,8 @@ export const StyledCard = styled.div`
     top: 22px;
     left: 22px;
   }
+
+  .blue-badge {
+    background-color: #026080;
+  }
 `;

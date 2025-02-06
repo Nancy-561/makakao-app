@@ -8,15 +8,16 @@ export const Input = ({
   type = "text",
   inputClassName="",
   value="",
-  readOnly=false
+  readOnly=false,
+  labelClassName=""
 }) => {
   return (
     <StyledInput className="mb-3 text-left">
-      <label className="font-inter mb-2" htmlFor={inputId}>
+      <label className={`font-inter ${labelClassName}`} htmlFor={inputId}>
         {text}
       </label>
       <input
-        className={`shadow border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline ${inputClassName}`}
+        className={`shadow border rounded w-full mt-2 py-2 px-3 leading-tight focus:outline-none focus:shadow-outline ${inputClassName}`}
         id={inputId}
         type={type}
         value={value}

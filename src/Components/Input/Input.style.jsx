@@ -15,4 +15,14 @@ export const StyledInput = styled.div`
       background-color: #ffffff;
     }
   }
+
+  .from-label, .to-label {
+    color: #A7A7A7;
+    float: left;
+    font-weight: 400;
+  }
+
+  .to-label {
+    float: right;
+  }
 `;

@@ -6,8 +6,17 @@ import { StyledCard } from "./ProductCard.styles";
 
 export const ProductCard = (props) => {
   const navigate = useNavigate();
-  const { categrory, imageUrl, price, liveBidding, bidPrice, discount, name } =
-    props;
+  const {
+    categrory,
+    imageUrl,
+    price,
+    liveBidding,
+    bidPrice,
+    discount,
+    name,
+    secondaryCard = false,
+    index,
+  } = props;
   const btnText = liveBidding ? "Place Bid" : "Add to Cart";
 
   const formatPrice = (value) => {
@@ -18,9 +27,21 @@ export const ProductCard = (props) => {
   };
 
   return (
-    <StyledCard key={name} className="flex-shrink-0 p-4 shadow-md">
+    <StyledCard
+      key={`${name}-${index}-${btnText}`}
+      className={`flex-shrink-0 p-4 shadow-md`}
+      onClick={() => navigate("/product-details", { state: props })}
+    >
       {discount > 0 && !liveBidding && (
-        <span className="discount-badge font-inter">- {discount}%</span>
+        <span
+          className={
+            secondaryCard
+              ? "discount-badge font-inter blue-badge"
+              : "discount-badge font-inter"
+          }
+        >
+          - {discount}%
+        </span>
       )}
       <img
         src={imageUrl}
@@ -45,8 +66,10 @@ export const ProductCard = (props) => {
       <Button
         btnText={btnText}
         btnId={btnText}
-        btnClassName={liveBidding ? "bg-navy-btn" : "bg-black-btn"}
-        handleClick={() => navigate("/product-details", { props })}
+        btnClassName={
+          liveBidding || secondaryCard ? "bg-navy-btn" : "bg-black-btn"
+        }
+        handleClick={() => navigate("/product-details", { state: props })}
       />
     </StyledCard>
   );

@@ -52,4 +52,36 @@ export const StyledHome = styled.div`
     text-align: center;
     font-weight: 400;
   }
+  .footer-img-container {
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 89px;
+      object-fit: contain;
+      width: -webkit-fill-available;
+    }
+  }
+  .banner-content {
+    color: #e7e7e3;
+    font-size: 24px;
+    line-height: 36px;
+    position: absolute;
+    top: 10%;
+    left: 20px;
+    text-align: left;
+    max-width: 30%;
+    font-weight: 400;
+
+    button {
+      border: 1px solid #a2b8cc;
+      font-size: 14px;
+      line-height: 49px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+  }
 `;

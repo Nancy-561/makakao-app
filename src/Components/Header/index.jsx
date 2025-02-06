@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FiSearch, FiShoppingCart, FiShoppingBag } from "react-icons/fi";
+import { FiShoppingCart, FiShoppingBag } from "react-icons/fi";
 import { GoPerson } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoPersonCircleOutline } from "react-icons/io5";
 
+import { SearchBar } from "../../Components/SearchBar";
 import { navTabs } from "../../Mocks/productMock";
-import { HeaderWrapper, Nav, SearchBar } from "./Header.styles";
+import { HeaderWrapper, Nav } from "./Header.styles";
 
 export const Header = ({ isLoggedIn, count }) => {
   const navigate = useNavigate();
@@ -20,14 +21,7 @@ export const Header = ({ isLoggedIn, count }) => {
             className="h-[100px] hidden md:block"
             onClick={() => navigate("/")}
           />
-          <SearchBar className="bg-[#F5F5F5]">
-            <input
-              type="text"
-              placeholder="Search for products"
-              className="border rounded px-2 py-1 w-full bg-[#F5F5F5] text-[#292D32]"
-            />
-            <FiSearch className="mx-2 h-[24px] w-[24px]" />
-          </SearchBar>
+          <SearchBar />
         </div>
         <div className="flex items-center gap-1 md:gap-4 md:px-8">
           <a href="#" className="flex items-center gap-1 sell-btn">
@@ -65,7 +59,8 @@ export const Header = ({ isLoggedIn, count }) => {
       <Nav className="md:justify-center">
         {navTabs.map(({ name, id }) => (
           <Link
-            to={`/product-listing?category=${id}`}
+            to="/product-listing" 
+            state= {{ category: id }}
             key={id}
             className="font-poppins inline-block whitespace-nowrap p-[14px]"
           >

@@ -9,6 +9,7 @@ import {
   ForgotPassword,
   MyAccount,
   Home,
+  ProductListing,
 } from "./Screens";
 import "./App.css";
 
@@ -25,8 +26,11 @@ function App() {
             element={<MainLayout isLoggedIn={isLoggedIn} count={count} />}
           >
             <Route index element={<Home />} />
-            <Route path="product-listing" element={<div>Product Listing</div>} />
-            <Route path="product-details" element={<div>Product Details</div>} />
+            <Route path="product-listing" element={<ProductListing />} />
+            <Route
+              path="product-details"
+              element={<div>Product Details</div>}
+            />
             <Route path="my-account" element={<MyAccount />} />
             <Route path="cart" element={<div>Cart</div>} />
           </Route>

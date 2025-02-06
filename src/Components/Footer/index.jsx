@@ -48,7 +48,7 @@ export const Footer = () => {
           <ul className={listClass}>
             {categoryMap.map(({ name, id }) => (
               <li key={id}>
-                <Link to={`/product-listing?category=${id}`}>{name}</Link>
+                <Link to="/product-listing" state={{category: id}}>{name}</Link>
               </li>
             ))}
           </ul>

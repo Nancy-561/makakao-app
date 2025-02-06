@@ -150,6 +150,8 @@ export const PopularProducts = [
   },
 ];
 
+export const AllAvailableProducts = [...PopularProducts, ...PopularProducts, ...PopularProducts]
+
 export const navTabs = [
   { name: "Tryon Products", id: "tryon" },
   { name: "Sunglasses", id: "sunglasses" },
