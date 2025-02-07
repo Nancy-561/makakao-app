@@ -42,7 +42,7 @@ export const CartCheckout = () => {
                 {renderEachStep(currentStep, 3, "Payment", <FaRegCreditCard />)}
             </div>
 
-          <div className="flex-grow mt-[1rem]">
+          <div className="flex-grow my-[1rem]">
             {currentStep === 0 && <Address />}
             {currentStep === 1 && <Shipping />}
             {currentStep === 2 && <Payment />}
@@ -52,7 +52,7 @@ export const CartCheckout = () => {
                 <Button
                     btnText="Back"
                     btnId="back-btn"
-                    btnClassName="secondary-btn max-w-[15%]"
+                    btnClassName="max-w-[15%] login-btn"
                     handleClick={prevStep}
                 />
                 <Button

@@ -13,6 +13,7 @@ import {
 } from "./Screens";
 import "./App.css";
 import { Cart } from "./Screens/Cart";
+import { Shipping } from "./Screens/Cart/Shipping";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -34,6 +35,7 @@ function App() {
             />
             <Route path="my-account" element={<MyAccount />} />
             <Route path="cart" element={<Cart/>} />
+            <Route path="cart-shipping" element={<Shipping/>} />
           </Route>
           <Route
             path="/login"

@@ -37,6 +37,7 @@ export const Address = () => {
                                     type="radio"
                                     name="address"
                                     checked={selected === address.id}
+                                    className="accent-black"
                                     onChange={() => setSelected(address.id)}
                                 />
                                 <span className="font-semibold">{address.label}</span>
