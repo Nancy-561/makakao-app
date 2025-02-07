@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { Filter } from "./Filter";
+import { CustomLink } from "../../Components/CustomLink";
 import { SearchBar } from "../../Components/SearchBar";
 import { Dropdown } from "../../Components/Dropdown";
 import { ProductCard } from "../../Components/ProductCard";
@@ -29,7 +30,7 @@ export const ProductListing = () => {
       <Filter />
       <div className="p-6">
         <div className="text-[#A4A4BE] font-poppins font-medium text-[12px] leading-[24px] flex items-center">
-          <a href="/">Home</a>
+          <CustomLink redirectTo="/" text="Home" />
           <IoIosArrowForward size={14} className="mx-2" />
           <span>{category || "All Products"}</span>
         </div>

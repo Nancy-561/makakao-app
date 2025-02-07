@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { ImInstagram } from "react-icons/im";
 import { FaTwitter, FaYoutube } from "react-icons/fa";
 import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/ti";
 
+import { CustomLink } from "../CustomLink";
 import { categoryMap, linksMap1, linksMap2 } from "../../Mocks/productMock";
 import { FooterContainer } from "./Footer.styles";
 
@@ -13,6 +13,25 @@ export const Footer = () => {
 
   const renderSocialIcons = (icon) => {
     return <div className="icon cursor-pointer">{icon}</div>;
+  };
+
+  const renderLinks = (title, dataMap, redirectTo) => {
+    return (
+      <div>
+        <h3 className={labelClass}>{title}</h3>
+        <ul className={listClass}>
+          {dataMap.map(({ name, id }) => (
+            <li key={id} className="hover:text-black">
+              <CustomLink
+                text={name}
+                redirectTo={redirectTo || `/${id}`}
+                state={{ category: id }}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   };
 
   return (
@@ -43,40 +62,13 @@ export const Footer = () => {
         </div>
 
         {/* Categories */}
-        <div>
-          <h3 className={labelClass}>Categories</h3>
-          <ul className={listClass}>
-            {categoryMap.map(({ name, id }) => (
-              <li key={id}>
-                <Link to="/product-listing" state={{category: id}}>{name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {renderLinks("Categories", categoryMap, '/product-listing')}
 
         {/* Useful Links */}
-        <div>
-          <h3 className={labelClass}>Useful Links</h3>
-          <ul className={listClass}>
-            {linksMap1.map(({ name, id }) => (
-              <li key={id}>
-                <Link to={`/${id}`}>{name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {renderLinks("Useful Links", linksMap1)}
 
         {/* Additional Useful Links */}
-        <div>
-          <h3 className={labelClass}>Useful Links</h3>
-          <ul className={listClass}>
-            {linksMap2.map(({ name, id }) => (
-              <li key={id}>
-                <Link to={`/${id}`}>{name}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {renderLinks("Useful Links", linksMap2)}
       </div>
     </FooterContainer>
   );

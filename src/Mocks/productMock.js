@@ -1,3 +1,30 @@
+const imagesData = [
+  {
+    url: "https://s3-alpha-sig.figma.com/img/fddd/e678/6503d847a818175bab19d30538dafd4b?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KIBDinYmoS2AjBPFixZtpEr7ENNOnNqUtIb8sFqYJdmE4xfhp90bl7jAM-E9G5pHOF8sSE8W1LEEQ2KGV6ArZ~UFr~Xrvh-UDaqgx9Ags6jYHdaAxd4qGN4QCCKUics~7HAnOq2KUm6CN6Uj84GijWyorFy6h6JwGWz04ZRfz0jt7yMPgxq1FZ-2ki0IXPTnGsOjOyWoLcBszuji53qeQP9DA0aeVNaVNAOMxxTgosu8uuU9BN0HHp6XK170o77~k24W~td6lJRMhxEx4AZ2m6oQpc52XZPmLCVUxqPTc5r~tq425BJpU435aq1kwVxQAScKqhr--RM2gNFTWJPlMg__",
+    type: "img",
+  },
+  {
+    url: "https://s3-alpha-sig.figma.com/img/4a45/a80c/b53c3ec621bd802bd6b0761233935e23?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=hS8yT0WBHJdIHlOXI-k-FQnCBCU8OvKW5RghNvfG8t34P3mLKJ8aiQAit1rScsnJxN7Zous9OuYxzPsavm4bZE2f8hjvvDIzpk3MZzueD89NAW9dFwgO-ni8xmRWmv9CK1iuM-QUmkOI46bhrbX9q-I~OmF25n8dawLQpUpnEWvrta5vwMoYvdu6b2yu9n4tKEshaDDa4BZ6Smy4IbtgZ7Abd6qgP4CI0hKUG9MjhkaoQFyjjuLJb3-e8R8WXvQ5LtWL8eAKwBiyTF06slqDNAXdBpNe24PHZossbUU9pFMDoGk8USggxDT6aLu55597VXJD9x5z3S5Lf8kvpjh4ig__",
+    type: "img",
+  },
+  {
+    url: "https://s3-figma-videos-production-sig.figma.com/video/1062712640066644349/TEAM/fe68/b3e4/-a585-4d9d-b241-b1c51e1920e1?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VHf7gINyOLQtap5cvDlAZXxcOsWKZ4O5twX-SuVi3HaUhNMpT-ua2xsK5T2GMEyylGhrk3LOhKVUclRHVmdxdTE7CE4Kwy2EgCk3ZnEWaiF93JW6pmQUdXSWqet6oeyplfEFD3r4NHFcorNb~Gz3OzLPmxo4t1w3-8Ie0jXZL7ABJ8w7eSbyep37VRuBQDl6m7~s~hpCgTla0ty6SOxcgLmB-F90XpMC~O8LCs1ZuWV525IkQv3vH7toJM4mbBu02HFNZnyoG5xM3PaIzQuUKcNnLzFyRlOVPhzpM7XKBFlY4Jl4ViTkRZfG2XGU2TfXQZyDc7weasatDYcwQY4PYQ__",
+    type: "video",
+  },
+  {
+    url: "https://s3-alpha-sig.figma.com/img/5146/35db/3035746e235cd8cbb46eeb67324eb47a?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=sqc5Cm-wT2VDm6mhJLOOuRFcUGUPjfRUaGYn5onK23i6sohCVYPozPylMpoZ8tvnGKEYGA~g-tTQmUmdsPCYL20mI~V3gkBK3l3fXu-~GhKVDNZXDBLC-b8lMTwyQ0eun-d0zdhCTW9xesixFl4FdtskM7y~0KGGhFyHBofF5~z5g31K-N5PgnA5dGjuoFpuXQTmXyZcdJR5k2ilWW6VgubrvcOF47WdJBMWbdgFqXbbQchsS6P-~n0drxUV6rJgjlzEUV66GP3zdtAO-pf2W4pSVxi6DSXRnLcEYCPPPlWDXIVCUNpzYZTLgOavKHNgcOgm4khrMD6Xuceqb0t4hw__",
+    type: "img",
+  },
+  {
+    url: "https://s3-alpha-sig.figma.com/img/86df/213c/16e8e305f05dca8a7be3fcaf518d9aa1?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=XzB0klH6PJu38vkea~yoTWJ7cL~8Srki27iO6lFWTX4RHLzfseLdWjiCtqtm0z7UEsSI4ByBDJf44bV6KmhFoksO-xdKlB7a1sQeCKZtObHuo-wggb4XWmIoPHlFZc73xDydAqfj3DgeUW7kY5buhOSN0Y9zvg7PHc-9EZWBR3wJVuTpwXKx2FoHAUueMo6yCQrzE4wLP-0LbZXtcV82uNrxCALRSzOgn84C~htF0H6GuDcqqz8kh~tbbpJZuumhY-DPJVpqfiUVxN2E8SIWa-h0nvOmfX1c4E1Pezmy0azSiJt6iZzcAB76zMQH9n8YMeWvycukL7BMQm7frtjOZg__",
+    type: "img",
+  },
+  {
+    url: "https://s3-alpha-sig.figma.com/img/911d/5f52/ea9064ea4b03eed2994f515124eb5e2c?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=kTV8jIaXqmcQ9xPNxjNtn2-BGfP3M8byY0Iv-oZ4T~Iii~AKpwhzcZEN4hkbTBmTuHInnmxNeMYb6Ucw94zbhYZq8kaz5nURTt~~RBjfQuLcYYORPkzjKE0MAEi7EDMOsRsvClL65KcA9VSN3QAT8XMXfapCJtRIL7GIZa1DxdPYRIkd7WeoQenoyC9xLTV7V8jzYnwnELE28tg~k7YGGdf9jStlohPm-Zb5nqBEfscZhE0vFdkFifq4H45skgNAnJz0TVkGF8AXB0fXpHTOyJLb5-jMprVTlbaK7DQzTKnQvRCbqyA7VJNQrkYCW3sf3Gm17WOyl9VePgLR4vA2Ug__",
+    type: "img",
+  },
+];
+
 export const AvailableProductCategories = [
   {
     name: "Clothing",
@@ -53,12 +80,17 @@ export const LastBidProducts = [
   {
     name: "Versace Men | Field Force",
     categrory: "Watch",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
     price: 2499.0,
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Versace Men | Field Force",
@@ -69,36 +101,58 @@ export const LastBidProducts = [
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Versace Men | Field Force",
     categrory: "Watch",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
     price: 2499.0,
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Versace Men | Field Force",
     categrory: "Watch",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
     price: 2499.0,
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Versace Men | Field Force",
     categrory: "Watch",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
     price: 2499.0,
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
 ];
 
@@ -106,35 +160,55 @@ export const PopularProducts = [
   {
     name: "Escape Oval sunglasses",
     categrory: "Sunglasses",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/e5bf/ad09/aa7717c8ffbf6d26e77bd204914ac214?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=O1OyKeZHIKKu6yv17JHculipFDU~h57HuHgT4Z~QEi3FR~sLuhtHifjsfC5MgrgFooiYLTjO5uBMlXlzpW3xaUI9BpFeeHOwbWJTK1ALmpko0b19Ly0hEkMXZK31f-QpksHDlu4JAHKk7kUmkPQYzuj~n-iZJFRzS1ZejavRFytt1qAqv-Z-K36FyDE~OXsGdf94aILcCgn~vudrdLhrEPqHD3iLxzJ6ptuw0VM2~wNhr0mP1AE9ftQko6ViRAiaAj2Oo7Yyh2T1nb74e~ETezHCSnkcuJy3WZRv2ZQ0MghR7JBzxyqHQZq4Ywgco3QgB~XcAamipoznL5419P3IQQ__",
     price: 1235.0,
     liveBidding: false,
     discount: 23,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/e5bf/ad09/aa7717c8ffbf6d26e77bd204914ac214?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=O1OyKeZHIKKu6yv17JHculipFDU~h57HuHgT4Z~QEi3FR~sLuhtHifjsfC5MgrgFooiYLTjO5uBMlXlzpW3xaUI9BpFeeHOwbWJTK1ALmpko0b19Ly0hEkMXZK31f-QpksHDlu4JAHKk7kUmkPQYzuj~n-iZJFRzS1ZejavRFytt1qAqv-Z-K36FyDE~OXsGdf94aILcCgn~vudrdLhrEPqHD3iLxzJ6ptuw0VM2~wNhr0mP1AE9ftQko6ViRAiaAj2Oo7Yyh2T1nb74e~ETezHCSnkcuJy3WZRv2ZQ0MghR7JBzxyqHQZq4Ywgco3QgB~XcAamipoznL5419P3IQQ__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Escape Oval sunglasses",
     categrory: "Sunglasses",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/20a6/cfd7/5fa1b553dcc627a0590e2b0da05c980e?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BAhp6zNJnbaQrhONpHbwEAcXknGplS90KQ12SEtsDawNBlAE3Btla-mCXMZzbzhqXCLh33pgavjZnHsuwgBJOhhCNytCGJBD3pjRf8zF4UL~65~hgjGmT2c3LqCGOy2mE6lVXuumQkZwKXvWC~KnUGQ5D2u1qL2szwiOAr~LvxN0g7bwaDl-j12Itui5VbaXpsgyEucricPmSAYQ39xSMoMNqNfGq5zZdGC-7iY0mJqPQgd2UelA9YfIagcLfG~UeHdtPOBKUTLyYT90kmY2f3QFMv1d6Df2MyQUHvAd2OpEaJzsQ1g784h5eSXZpigsuoCxo-bmvmPN-Ox251vqDw__",
     price: 1256.0,
     liveBidding: false,
     discount: 26,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/20a6/cfd7/5fa1b553dcc627a0590e2b0da05c980e?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BAhp6zNJnbaQrhONpHbwEAcXknGplS90KQ12SEtsDawNBlAE3Btla-mCXMZzbzhqXCLh33pgavjZnHsuwgBJOhhCNytCGJBD3pjRf8zF4UL~65~hgjGmT2c3LqCGOy2mE6lVXuumQkZwKXvWC~KnUGQ5D2u1qL2szwiOAr~LvxN0g7bwaDl-j12Itui5VbaXpsgyEucricPmSAYQ39xSMoMNqNfGq5zZdGC-7iY0mJqPQgd2UelA9YfIagcLfG~UeHdtPOBKUTLyYT90kmY2f3QFMv1d6Df2MyQUHvAd2OpEaJzsQ1g784h5eSXZpigsuoCxo-bmvmPN-Ox251vqDw__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Escape Oval sunglasses",
     categrory: "Sunglasses",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/1af1/8f08/a8cdf861e256bf99f286c3079f5c33fc?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=gckBaVQDn8hc56QJlgS4H52vcI2vNWIY3Fx~KZlTRn~flK09y9Set3bs~~2AAYNS~GdoEBMuet5x~G4ngzIXpHv324hlxJC2QSaxwotYPfWn0PYHDUfN4ttq-vDuKGrTKPfZO7PffIVB15wADl7iWvOAgqPGQPrtfJqoafVUHGbIUFNhKZmqapHb5Zo6Krw6wSfaLGGHnGgkayP~8oeAh6CeCQVCyU2VDCc4iqGr5aOdiPSQGoJ0Im04fcH~yhEyPysr-8KKA2Mh29Jyz9J47n355cUA3hK~MSRmPJzxFly2IQVGruoTDXUuhKhYdd6dOE5zEp-triIGZ6bpV8BqIQ__",
     price: 7890.0,
     liveBidding: false,
     discount: 23,
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/1af1/8f08/a8cdf861e256bf99f286c3079f5c33fc?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=gckBaVQDn8hc56QJlgS4H52vcI2vNWIY3Fx~KZlTRn~flK09y9Set3bs~~2AAYNS~GdoEBMuet5x~G4ngzIXpHv324hlxJC2QSaxwotYPfWn0PYHDUfN4ttq-vDuKGrTKPfZO7PffIVB15wADl7iWvOAgqPGQPrtfJqoafVUHGbIUFNhKZmqapHb5Zo6Krw6wSfaLGGHnGgkayP~8oeAh6CeCQVCyU2VDCc4iqGr5aOdiPSQGoJ0Im04fcH~yhEyPysr-8KKA2Mh29Jyz9J47n355cUA3hK~MSRmPJzxFly2IQVGruoTDXUuhKhYdd6dOE5zEp-triIGZ6bpV8BqIQ__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
   },
   {
     name: "Escape Oval sunglasses",
     categrory: "Sunglasses",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/4d0a/b9fa/c0fa206382dd328e5361fb8355546624?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iJazAUEWrAaZ-ouJgDVVT99OHVMNA-kbQTjn9nmtDtARPAwk38p-MIybxy7Z0gOWgvmd3U--drE9YzUqMjQDVQYasWDa21yhUd41FZ-dPWiSC3PEgyNl~-txt48dqizH8Rjk0Ls1Bdxib1zqzTmwvBibZG01JfwjIuDYhi530Usj65kN8BZNDhHlXotDZpE1HXNZ3vj2ijM1yhHcNT78tN5VuQY4mbKUxqsPjxivFqzwaZqBg5FWYen-HUfm4eBZJ6ywBun8jGzLB10gYLDff7Dq80bzi5pdOskEG1oOfPSrtRYAtZBB9KsX4Yh5lSxX-gzsaz8ibTuDIpXL6lC34A__",
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/4d0a/b9fa/c0fa206382dd328e5361fb8355546624?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iJazAUEWrAaZ-ouJgDVVT99OHVMNA-kbQTjn9nmtDtARPAwk38p-MIybxy7Z0gOWgvmd3U--drE9YzUqMjQDVQYasWDa21yhUd41FZ-dPWiSC3PEgyNl~-txt48dqizH8Rjk0Ls1Bdxib1zqzTmwvBibZG01JfwjIuDYhi530Usj65kN8BZNDhHlXotDZpE1HXNZ3vj2ijM1yhHcNT78tN5VuQY4mbKUxqsPjxivFqzwaZqBg5FWYen-HUfm4eBZJ6ywBun8jGzLB10gYLDff7Dq80bzi5pdOskEG1oOfPSrtRYAtZBB9KsX4Yh5lSxX-gzsaz8ibTuDIpXL6lC34A__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
     price: 2345.54,
     liveBidding: false,
     discount: 23,
@@ -142,15 +216,24 @@ export const PopularProducts = [
   {
     name: "Versace Men | Field Force",
     categrory: "Watch",
-    imageUrl:
-      "https://s3-alpha-sig.figma.com/img/c7db/d7e3/b0c5d8666c47e3cda1b0e497c587fb84?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=OTOl1gGCvyQdSUjJPA~HY0oytMVDH0qy8nYbkfzdi9z5B4O9lAyyMWebD8mJi-6OyzEeDe0bELGOKTOj0pd~IH4b-3gtcvYQ6eGTJmrBwht3wiivEeSfo6SrzQycs~GVDBZRbIDib9TTGQglih1zUKcxYxojtXIxHgrygslFBXDtu6te3MXkg9uEWMOu-NQc2xfxp~hCFEMl8i92jUMzC5pu0zniqPnniApouL~By4wCMZuaQdrx1pQnxBLLcOqTI0DJDuxwhFdfuo2JoA78zHX6YRZYGwlpgq6Ccke5geaqF5U9FFe8sU5g63BVsVaXeOR4-qUjeBMrKpSA4EKe0Q__",
+    images: [
+      {
+        url: "https://s3-alpha-sig.figma.com/img/c7db/d7e3/b0c5d8666c47e3cda1b0e497c587fb84?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=OTOl1gGCvyQdSUjJPA~HY0oytMVDH0qy8nYbkfzdi9z5B4O9lAyyMWebD8mJi-6OyzEeDe0bELGOKTOj0pd~IH4b-3gtcvYQ6eGTJmrBwht3wiivEeSfo6SrzQycs~GVDBZRbIDib9TTGQglih1zUKcxYxojtXIxHgrygslFBXDtu6te3MXkg9uEWMOu-NQc2xfxp~hCFEMl8i92jUMzC5pu0zniqPnniApouL~By4wCMZuaQdrx1pQnxBLLcOqTI0DJDuxwhFdfuo2JoA78zHX6YRZYGwlpgq6Ccke5geaqF5U9FFe8sU5g63BVsVaXeOR4-qUjeBMrKpSA4EKe0Q__",
+        type: "img",
+      },
+      ...imagesData,
+    ],
     price: 1899.0,
     liveBidding: false,
     discount: 23,
   },
 ];
 
-export const AllAvailableProducts = [...PopularProducts, ...PopularProducts, ...PopularProducts]
+export const AllAvailableProducts = [
+  ...PopularProducts,
+  ...PopularProducts,
+  ...PopularProducts,
+];
 
 export const navTabs = [
   { name: "Tryon Products", id: "tryon" },
@@ -163,12 +246,12 @@ export const navTabs = [
 ];
 
 export const categoryMap = [
-  { name: "Clothing", id: "clothing" },
-  { name: "Eyewear", id: "eyewear" },
-  { name: "Watches", id: "watches" },
-  { name: "Furniture", id: "furniture" },
-  { name: "Beauty", id: "beauty" },
-  { name: "Gifts", id: "gifts" },
+  { name: "Clothing", id: "Clothing" },
+  { name: "Eyewear", id: "Eyewear" },
+  { name: "Watches", id: "Watches" },
+  { name: "Furniture", id: "Furniture" },
+  { name: "Beauty", id: "Beauty" },
+  { name: "Gifts", id: "Gifts" },
 ];
 
 export const linksMap1 = [

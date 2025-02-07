@@ -10,6 +10,7 @@ import {
   MyAccount,
   Home,
   ProductListing,
+  ProductDetails,
 } from "./Screens";
 import "./App.css";
 import { Cart } from "./Screens/Cart";
@@ -29,10 +30,7 @@ function App() {
           >
             <Route index element={<Home />} />
             <Route path="product-listing" element={<ProductListing />} />
-            <Route
-              path="product-details"
-              element={<div>Product Details</div>}
-            />
+            <Route path="product-details" element={<ProductDetails />} />
             <Route path="my-account" element={<MyAccount />} />
             <Route path="cart" element={<Cart/>} />
             <Route path="cart-shipping" element={<Shipping/>} />

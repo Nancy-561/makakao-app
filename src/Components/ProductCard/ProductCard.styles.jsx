@@ -16,6 +16,7 @@ export const StyledCard = styled.div`
     border-radius: 12px;
     top: 22px;
     left: 22px;
+    z-index: 10;
   }
 
   .blue-badge {

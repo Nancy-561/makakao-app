@@ -1,4 +1,4 @@
-import { CartItemCard } from "../../Components/CartItemCard"
+import { CartItemCard } from "../../Components/CartItemCard";
 import { CartList, OrderSummaryContainer } from "./Cart.styles";
 import { Input } from "../../Components/Input";
 import { Button } from "../../Components/Button";
@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { CartCheckout } from "./CartCheckout";
 
 export const Cart = () => {
-  const [checkoutSelected, setCheckoutSelected] = useState(false)
+  const [checkoutSelected, setCheckoutSelected] = useState(false);
   const cartItems = [
     {
       id: 1,
@@ -14,7 +14,8 @@ export const Cart = () => {
       sku: "25139526913984",
       price: 1399,
       quantity: 1,
-      image: "https://static.vecteezy.com/system/resources/thumbnails/029/282/385/small_2x/pixel-art-sweater-pixelated-sweater-clothes-sweater-autumn-icons-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg",
+      image:
+        "https://static.vecteezy.com/system/resources/thumbnails/029/282/385/small_2x/pixel-art-sweater-pixelated-sweater-clothes-sweater-autumn-icons-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg",
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ export const Cart = () => {
       sku: "25139526913984",
       price: 1399,
       quantity: 1,
-      image: "https://static.vecteezy.com/system/resources/thumbnails/029/282/385/small_2x/pixel-art-sweater-pixelated-sweater-clothes-sweater-autumn-icons-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg",
+      image:
+        "https://static.vecteezy.com/system/resources/thumbnails/029/282/385/small_2x/pixel-art-sweater-pixelated-sweater-clothes-sweater-autumn-icons-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg",
     },
     {
       id: 3,
@@ -30,17 +32,18 @@ export const Cart = () => {
       sku: "25139526913984",
       price: 1399,
       quantity: 1,
-      image: "https://static.vecteezy.com/system/resources/thumbnails/029/282/385/small_2x/pixel-art-sweater-pixelated-sweater-clothes-sweater-autumn-icons-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg",
+      image:
+        "https://static.vecteezy.com/system/resources/thumbnails/029/282/385/small_2x/pixel-art-sweater-pixelated-sweater-clothes-sweater-autumn-icons-background-pixelated-for-the-pixel-art-game-and-icon-for-website-and-video-game-old-school-retro-vector.jpg",
     },
   ];
 
   const handleCheckOut = () => {
-    setCheckoutSelected(true)
-  }
-  if(checkoutSelected===true){
-    return <CartCheckout/>
-  }
-  else{
+    setCheckoutSelected(!checkoutSelected);
+  };
+
+  if (checkoutSelected === true) {
+    return <CartCheckout handleCheckOut={handleCheckOut}/>;
+  } else {
     return (
       <div className="flex justify-center gap-[4rem] m-[2rem]">
         <CartList>
@@ -50,7 +53,9 @@ export const Cart = () => {
           ))}
         </CartList>
         <OrderSummaryContainer className="p-[2rem] border-2 border-[#EBEBEB]">
-          <div className="text-left mb-[1.5rem] font-bold text-[1.25rem]">Order Summary</div>
+          <div className="text-left mb-[1.5rem] font-bold text-[1.25rem]">
+            Order Summary
+          </div>
           <Input
             inputId="username"
             placeholder="Code"
@@ -58,9 +63,15 @@ export const Cart = () => {
             inputClassName="white-bg-input"
           />
 
-          <div className="font-inter text-left text-[#4b5869]">Your bonus card number</div>
+          <div className="font-inter text-left text-[#4b5869]">
+            Your bonus card number
+          </div>
           <div className="card-number-div">
-            <input type="text" placeholder="Enter Card Number" className="card-number-input" />
+            <input
+              type="text"
+              placeholder="Enter Card Number"
+              className="card-number-input"
+            />
             <button className="text-sm applybutton">Apply</button>
           </div>
 
@@ -93,12 +104,7 @@ export const Cart = () => {
             handleClick={handleCheckOut}
           />
         </OrderSummaryContainer>
-
       </div>
-
-
-  );
+    );
   }
-
-  
-}
+};

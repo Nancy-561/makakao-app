@@ -18,6 +18,13 @@ export const StyledButton = styled.button`
     line-height: 22px;
   }
 
+  &.action-btn {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 16px;
+  }
+
   &.google-btn {
     color: #2d313e;
     background-color: #e1f0ff;
@@ -28,10 +35,25 @@ export const StyledButton = styled.button`
   }
 
   &.bg-navy-btn {
-    background-color: #026080
+    background-color: #026080;
   }
 
   &.bg-black-btn {
-    background-color: #000000
+    background-color: #000000;
+  }
+
+  &.bg-gray-btn {
+    background-color: #363232;
+  }
+
+  &.try-on-btn {
+    background: linear-gradient(96.02deg, #026080 4.2%, #FF9017 112.39%);
+    width: max-content;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: 400;
+    position: absolute;
+    top: 24px;
+    padding: 10px 32px;
   }
 `;
