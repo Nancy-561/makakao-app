@@ -108,8 +108,13 @@ export const ProductDetails = () => {
       </div>
       {showBidPopup && (
         <div className="bid-popup" onClick={() => setShowBidPopup(false)}>
-          <div className="content-container left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom"  onClick={e=>e.stopPropagation()}>
-            <ProductBiddingModel setShowBidPopup={() => setShowBidPopup(false)}  />
+          <div
+            className="content-container left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ProductBiddingModel
+              setShowBidPopup={() => setShowBidPopup(false)}
+            />
           </div>
         </div>
       )}
