@@ -56,4 +56,11 @@ export const StyledButton = styled.button`
     top: 24px;
     padding: 10px 32px;
   }
+
+  &.share-btn {
+    color: #FF9017;
+    width: max-content;
+    background: white;
+    padding: 10px;
+  }
 `;

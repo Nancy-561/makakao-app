@@ -25,6 +25,22 @@ const imagesData = [
   },
 ];
 
+const productInfo = {
+  SKU: "TSR0046MFC3MBKTV",
+  Availability: "In Stock",
+  Brand: "Titan",
+  "Product Warranty": "6 months",
+  Gender: "Men",
+  "Frame Material": "Plastic",
+  "Front Color": "Black",
+  "Temple Color": "Black",
+  "Temple Material": "Metal",
+  Rim: "Rimmed",
+  Size: "Medium",
+  "Frame Shape": "Reactangle",
+  "Country of Origin": "China"
+}
+
 export const AvailableProductCategories = [
   {
     name: "Clothing",
@@ -84,6 +100,9 @@ export const LastBidProducts = [
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
@@ -91,6 +110,8 @@ export const LastBidProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 4,
   },
   {
     name: "Versace Men | Field Force",
@@ -101,6 +122,9 @@ export const LastBidProducts = [
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
@@ -108,6 +132,8 @@ export const LastBidProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 3,
   },
   {
     name: "Versace Men | Field Force",
@@ -116,6 +142,9 @@ export const LastBidProducts = [
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
@@ -123,6 +152,8 @@ export const LastBidProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 5,
   },
   {
     name: "Versace Men | Field Force",
@@ -131,6 +162,9 @@ export const LastBidProducts = [
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
@@ -138,6 +172,8 @@ export const LastBidProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 4,
   },
   {
     name: "Versace Men | Field Force",
@@ -146,6 +182,9 @@ export const LastBidProducts = [
     liveBidding: true,
     bidPrice: 2499.0,
     discount: 0,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/2f87/0da8/a116ff4968cee08e78f5fff2436696e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=p8c2uQQnxUUHMu4eqnp3bK86cCpAeMPkAiXSlJQVF9VaTvn~d7xNO72VPO5fgoCo46wzzvpZSCgzWopnSdHU6xn52dcCYX1a14vwuaZ450yoifr0XGN3s9qqrZ7OrL-1w1PpvegOndOaVhLpgb1TXiX1fuaYLQuvTFw3ODub52TzapPf5d0E6k7uQHlkmxHclJ95zJyDaZajf6uhVyUnfp~m3VG7qk~LraxnygOy9unb1R7w3t~pkeDkffJ~PmQaQYbxuo7TP1-fdzdDlpH9WefX2FVepvtUoSAtidB7kbabS6TY39U7LbvwjvJnpDw79oOZbbonGcKgaJkDOTttVg__",
@@ -153,6 +192,8 @@ export const LastBidProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 4,
   },
 ];
 
@@ -163,6 +204,9 @@ export const PopularProducts = [
     price: 1235.0,
     liveBidding: false,
     discount: 23,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/e5bf/ad09/aa7717c8ffbf6d26e77bd204914ac214?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=O1OyKeZHIKKu6yv17JHculipFDU~h57HuHgT4Z~QEi3FR~sLuhtHifjsfC5MgrgFooiYLTjO5uBMlXlzpW3xaUI9BpFeeHOwbWJTK1ALmpko0b19Ly0hEkMXZK31f-QpksHDlu4JAHKk7kUmkPQYzuj~n-iZJFRzS1ZejavRFytt1qAqv-Z-K36FyDE~OXsGdf94aILcCgn~vudrdLhrEPqHD3iLxzJ6ptuw0VM2~wNhr0mP1AE9ftQko6ViRAiaAj2Oo7Yyh2T1nb74e~ETezHCSnkcuJy3WZRv2ZQ0MghR7JBzxyqHQZq4Ywgco3QgB~XcAamipoznL5419P3IQQ__",
@@ -170,13 +214,18 @@ export const PopularProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 5,
   },
   {
-    name: "Escape Oval sunglasses",
+    name: "Black Rectangle Rimmed Eyeglasses for women",
     categrory: "Sunglasses",
     price: 1256.0,
     liveBidding: false,
     discount: 26,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/20a6/cfd7/5fa1b553dcc627a0590e2b0da05c980e?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BAhp6zNJnbaQrhONpHbwEAcXknGplS90KQ12SEtsDawNBlAE3Btla-mCXMZzbzhqXCLh33pgavjZnHsuwgBJOhhCNytCGJBD3pjRf8zF4UL~65~hgjGmT2c3LqCGOy2mE6lVXuumQkZwKXvWC~KnUGQ5D2u1qL2szwiOAr~LvxN0g7bwaDl-j12Itui5VbaXpsgyEucricPmSAYQ39xSMoMNqNfGq5zZdGC-7iY0mJqPQgd2UelA9YfIagcLfG~UeHdtPOBKUTLyYT90kmY2f3QFMv1d6Df2MyQUHvAd2OpEaJzsQ1g784h5eSXZpigsuoCxo-bmvmPN-Ox251vqDw__",
@@ -184,6 +233,8 @@ export const PopularProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 23,
+    rating: 3.5,
   },
   {
     name: "Escape Oval sunglasses",
@@ -191,6 +242,9 @@ export const PopularProducts = [
     price: 7890.0,
     liveBidding: false,
     discount: 23,
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/1af1/8f08/a8cdf861e256bf99f286c3079f5c33fc?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=gckBaVQDn8hc56QJlgS4H52vcI2vNWIY3Fx~KZlTRn~flK09y9Set3bs~~2AAYNS~GdoEBMuet5x~G4ngzIXpHv324hlxJC2QSaxwotYPfWn0PYHDUfN4ttq-vDuKGrTKPfZO7PffIVB15wADl7iWvOAgqPGQPrtfJqoafVUHGbIUFNhKZmqapHb5Zo6Krw6wSfaLGGHnGgkayP~8oeAh6CeCQVCyU2VDCc4iqGr5aOdiPSQGoJ0Im04fcH~yhEyPysr-8KKA2Mh29Jyz9J47n355cUA3hK~MSRmPJzxFly2IQVGruoTDXUuhKhYdd6dOE5zEp-triIGZ6bpV8BqIQ__",
@@ -198,10 +252,15 @@ export const PopularProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 3,
   },
   {
     name: "Escape Oval sunglasses",
     categrory: "Sunglasses",
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/4d0a/b9fa/c0fa206382dd328e5361fb8355546624?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iJazAUEWrAaZ-ouJgDVVT99OHVMNA-kbQTjn9nmtDtARPAwk38p-MIybxy7Z0gOWgvmd3U--drE9YzUqMjQDVQYasWDa21yhUd41FZ-dPWiSC3PEgyNl~-txt48dqizH8Rjk0Ls1Bdxib1zqzTmwvBibZG01JfwjIuDYhi530Usj65kN8BZNDhHlXotDZpE1HXNZ3vj2ijM1yhHcNT78tN5VuQY4mbKUxqsPjxivFqzwaZqBg5FWYen-HUfm4eBZJ6ywBun8jGzLB10gYLDff7Dq80bzi5pdOskEG1oOfPSrtRYAtZBB9KsX4Yh5lSxX-gzsaz8ibTuDIpXL6lC34A__",
@@ -209,6 +268,8 @@ export const PopularProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 4,
     price: 2345.54,
     liveBidding: false,
     discount: 23,
@@ -216,6 +277,9 @@ export const PopularProducts = [
   {
     name: "Versace Men | Field Force",
     categrory: "Watch",
+    productInfo,
+    manufacture: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial area perspiciatis unde omnis iste natus",
+    imported: "Titan - Titan Company Ltd. CWH, Eyewear Division Plot no 24 & 24A, KIADB Industrial areaperspiciatis unde omnis iste natus",
     images: [
       {
         url: "https://s3-alpha-sig.figma.com/img/c7db/d7e3/b0c5d8666c47e3cda1b0e497c587fb84?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=OTOl1gGCvyQdSUjJPA~HY0oytMVDH0qy8nYbkfzdi9z5B4O9lAyyMWebD8mJi-6OyzEeDe0bELGOKTOj0pd~IH4b-3gtcvYQ6eGTJmrBwht3wiivEeSfo6SrzQycs~GVDBZRbIDib9TTGQglih1zUKcxYxojtXIxHgrygslFBXDtu6te3MXkg9uEWMOu-NQc2xfxp~hCFEMl8i92jUMzC5pu0zniqPnniApouL~By4wCMZuaQdrx1pQnxBLLcOqTI0DJDuxwhFdfuo2JoA78zHX6YRZYGwlpgq6Ccke5geaqF5U9FFe8sU5g63BVsVaXeOR4-qUjeBMrKpSA4EKe0Q__",
@@ -223,6 +287,8 @@ export const PopularProducts = [
       },
       ...imagesData,
     ],
+    reviewCount: 20,
+    rating: 4,
     price: 1899.0,
     liveBidding: false,
     discount: 23,

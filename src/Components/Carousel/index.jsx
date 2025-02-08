@@ -9,7 +9,7 @@ export const Carousel = ({
   width,
   unit,
   showImageIndicator,
-  containerClass,
+  containerClass = "",
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const containerRef = useRef(null);
@@ -43,7 +43,8 @@ export const Carousel = ({
   return (
     <div className="flex flex-col">
       <CarouselContainer
-        className={`w-[${width}${unit}] ${containerClass}`}
+        style={{ width: `${width}${unit}` }}
+        className={containerClass}
         ref={containerRef}
         onMouseDown={handleScrollStart}
         onMouseMove={handleScrollMove}
@@ -115,9 +116,9 @@ export const Carousel = ({
             </div>
           ) : (
             <div
-              className={`bg-[${
-                currentIndex === index ? "#D9D9D9" : "#D9D9D94D"
-              }] h-[3px]`}
+              className={`${
+                currentIndex === index ? "bg-[#D9D9D9]" : "bg-[#D9D9D94D]"
+              } h-[3px]`}
               style={{ width: `${indicatorWidth}%` }}
               onClick={(e) => {
                 e.stopPropagation();

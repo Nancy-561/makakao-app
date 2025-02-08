@@ -22,4 +22,14 @@ export const StyledCard = styled.div`
   .blue-badge {
     background-color: #026080;
   }
+
+  .card-bottom-container {
+    height: calc(100% - 282px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;
+    line-height: 21px;
+    text-align: left;
+  }
 `;

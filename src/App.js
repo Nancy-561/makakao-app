@@ -32,8 +32,8 @@ function App() {
             <Route path="product-listing" element={<ProductListing />} />
             <Route path="product-details" element={<ProductDetails />} />
             <Route path="my-account" element={<MyAccount />} />
-            <Route path="cart" element={<Cart/>} />
-            <Route path="cart-shipping" element={<Shipping/>} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="cart-shipping" element={<Shipping />} />
           </Route>
           <Route
             path="/login"

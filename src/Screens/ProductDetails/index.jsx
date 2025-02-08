@@ -1,72 +1,81 @@
 import React, { useState } from "react";
-import { FaCamera } from "react-icons/fa";
-import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
 import { useLocation } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
 
-import { Button } from "../../Components/Button";
-import { Carousel } from "../../Components/Carousel";
-import { StyledContainer } from "./ProductDetails.style";
+import { TryOn } from "./TryOn";
+import { ProductInfo } from "./ProductInfo";
+import { DetailsAndDesc } from "./DetailsAndDesc";
+import { StyledContainer, Rating, Star } from "./ProductDetails.style";
+
+export const formatPrice = (value) => {
+  if (isNaN(value)) return "0.00";
+  return Number(value)
+    .toFixed(2)
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 export const ProductDetails = () => {
   const location = useLocation();
-  const [wishlisted, setWishlisted] = useState(false);
-  const { images } = location.state;
+  const data = location.state;
+  const { price, images, rating, reviewCount, name } = data;
+  console.log(location.state);
 
   return (
-    <StyledContainer className="p-6">
-      <div className="flex justify-center flex-col">
-        <div className="relative img-container w-full h-[50vh]">
-          <Carousel
-            images={images}
-            height="100%"
-            width="100"
-            unit="%"
-            showImageIndicator={true}
-            containerClass="product-carousel py-4"
-          />
-          <Button
-            btnId="try-on-btn"
-            btnText={
-              <>
-                <span className="relative">
-                  <img
-                    src="https://s3-alpha-sig.figma.com/img/d835/101c/621ba4bda2af9ffdbf00f583ec2a6241?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=laYTtQ4mDDPrnc6ojhd~NdcLzY6X2-gNDMEAS3JzNBBtQ-FOZZctpjfqjBSd2VtiWVR-PpAd3bTrWMdV6qRxTsoKaWsYojb3BdbRO8g-EWiXxAfWDD5Hdl-nnvbAa7Oh-2xTs6eIHI5bxTQm49qKGQiZtE01jN1LuSmZSO0HQvXZIJtmnajgJMEZYl8FHmuu1aiov7w8jI2Ofip9pOm4bbkrNW70Hbqce-h2lD0QWg~l2Npn6aXmopa87-1LR~KNzJatraPnYlBXI~89SXmPcNU-wXOZC9yZut6Qpw55oicRk7upffAAT2T-sBnc4Xdt3QQgukaEI8hgKwbGPY4mWg__"
-                    alt="try-on-img"
-                    className="absolute left-[-17px] h-[19px] w-[19px] top-[-4px]"
-                  />
-                  <FaCamera size={24} className="text-[#ffffff] mr-3" />
-                </span>
-                TRY-ON
-              </>
-            }
-            btnClassName="left-1/2 -translate-x-1/2 try-on-btn font-poppins"
-          />
-          <div className="absolute right-[20px] top-[24px] text-[#F6585C]">
-            {wishlisted ? (
-              <IoIosHeart size={36} onClick={() => setWishlisted(false)} />
-            ) : (
-              <IoIosHeartEmpty size={36} onClick={() => setWishlisted(true)} />
-            )}
+    <StyledContainer className="p-6 font-poppins">
+      <TryOn images={images} />
+      <div className="text-left overflow-hidden">
+        <DetailsAndDesc {...data} />
+        <ProductInfo {...data} />
+        <div className="shipping-container p-5 mt-5 bg-[#F6F6F6]">
+          <div className="heading flex justify-between items-center cursor-pointer">
+            <div className="subheading font-medium flex items-center">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3579/cbd8/ebd2ce18563c01c8b4d77762fb6204e4?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BR7pqXtEaWU-iOR8DU0VzYVjs1soCRy8WII-DHRMiIZA5aib5wTbg6jyu9TdlZuEjpervWWZBuz4UMV-a~dMEnbiOvsC8tCp-681lg8jJJvqDIpdrBfKrixtUaJ75KTG9ZoC33aVmemqabUbeNd~2RbY9ZAzcGdJv8sE~rhm5F~rwuO-bf5Gyv5X9TSdYaTfGN-MvybeQ04DUkkzSIb~0Avkppq10n7AaxwZsz8j5xc1QUROlm3jlfvKGtHcJGp5E3esh0WpTh5TzAvXuKy1V9rKuBEzpG2hUa5aNYTydD62PDXJcO-32Adp3VyMgQn4EE87qXqWT7qCL8KOokpduQ__"
+                alt="new-img"
+                className="mr-3 h-[40px] w-[45px]"
+              />
+              Checkout some new related products
+            </div>
+            <IoIosArrowForward size={24} />
+          </div>
+          <div className="flex gap-4 overflow-scroll mt-3">
+            {[...Array(8)].map((_, index) => (
+              <div className="new-product-card font-inter flex-shrink-0">
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/fddd/e678/6503d847a818175bab19d30538dafd4b?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KIBDinYmoS2AjBPFixZtpEr7ENNOnNqUtIb8sFqYJdmE4xfhp90bl7jAM-E9G5pHOF8sSE8W1LEEQ2KGV6ArZ~UFr~Xrvh-UDaqgx9Ags6jYHdaAxd4qGN4QCCKUics~7HAnOq2KUm6CN6Uj84GijWyorFy6h6JwGWz04ZRfz0jt7yMPgxq1FZ-2ki0IXPTnGsOjOyWoLcBszuji53qeQP9DA0aeVNaVNAOMxxTgosu8uuU9BN0HHp6XK170o77~k24W~td6lJRMhxEx4AZ2m6oQpc52XZPmLCVUxqPTc5r~tq425BJpU435aq1kwVxQAScKqhr--RM2gNFTWJPlMg__"
+                  alt={`new-img${index}`}
+                  className="h-[60px] m-4 w-[-webkit-fill-available]"
+                />
+                <div className="new-product-info px-4 py-2">
+                  <span className="price-info">
+                    ${formatPrice(price)}{" "}
+                    <span className="strike-price">
+                      ${formatPrice(2 * price)}
+                    </span>
+                  </span>
+                  <div className="flex items-center my-2 text-[10px]">
+                    <Rating className="mr-2">
+                      {[...Array(5)].map((_, index) => (
+                        <Star
+                          key={index}
+                          className={
+                            index + 1 <= Math.ceil(rating)
+                              ? "highlighted-star"
+                              : ""
+                          }
+                        />
+                      ))}
+                    </Rating>
+                    {`(${reviewCount})`}
+                  </div>
+                  <div className="text-[10px] leading-[15px] text-[#606060] font-medium">
+                    {name}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="flex items-center p-4 gap-4 font-poppins">
-          <Button
-            btnId="add-to-wishlist"
-            btnText="Add to Wishlist"
-            btnClassName="action-btn bg-gray-btn"
-            handleClick={() => setWishlisted(true)}
-          />
-          <Button
-            btnId="place-bid-btn"
-            btnText="Place Bid"
-            btnClassName="action-btn bg-navy-btn"
-          />
-        </div>
-        <img
-          src="/home-img.png"
-          alt="home-img"
-          className="w-full rounded-[12px] h-[50vh]"
-        />
       </div>
     </StyledContainer>
   );

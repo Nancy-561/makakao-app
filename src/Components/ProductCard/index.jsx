@@ -31,7 +31,7 @@ export const ProductCard = (props) => {
   return (
     <StyledCard
       key={`${name}-${index}-${btnText}`}
-      className={`flex-shrink-0 py-4 shadow-md`}
+      className={`py-4 shadow-md w-[253px]`}
       onClick={() => navigate("/product-details", { state: props })}
     >
       {discount > 0 && !liveBidding && (
@@ -46,20 +46,24 @@ export const ProductCard = (props) => {
         </span>
       )}
       <Carousel images={filteredImages} height="252px" width="253" unit="px" />
-      <div className="text-left text-[15px] leading-[21px] font-inter mt-3 px-4">
-        <p className="text-[#101010E5] font-medium mb-1">{name}</p>
-        <p className="text-[#A5A5A5] mb-3">{categrory}</p>
-        <p className="text-[#026080] font-semibold mb-3">
-          $
-          {liveBidding ? (
-            <>
-              {formatPrice(bidPrice)}
-              <span className="text-[#5B6072] font-normal ml-2">Last bid</span>
-            </>
-          ) : (
-            formatPrice(price)
-          )}
-        </p>
+      <div className="card-bottom-container font-inter mt-3 px-4">
+        <div>
+          <p className="text-[#101010E5] font-medium mb-1">{name}</p>
+          <p className="text-[#A5A5A5] mb-3">{categrory}</p>
+          <p className="text-[#026080] font-semibold mb-3">
+            $
+            {liveBidding ? (
+              <>
+                {formatPrice(bidPrice)}
+                <span className="text-[#5B6072] font-normal ml-2">
+                  Last bid
+                </span>
+              </>
+            ) : (
+              formatPrice(price)
+            )}
+          </p>
+        </div>
         <Button
           btnText={btnText}
           btnId={btnText}
