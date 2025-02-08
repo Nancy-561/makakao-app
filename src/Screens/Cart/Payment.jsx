@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { OrderSummary, PaymentForm } from "./Cart.styles";
+import { Input } from "../../Components/Input";
+import { Button } from "../../Components/Button";
 
-export const Payment = () => {
+export const Payment = ({ handlePrevStep }) => {
   const [paymentMethod, setPaymentMethod] = useState("Credit Card");
+  const [cvv, setCvv] = useState("")
+  const [cardNumber, setCardNumber] = useState("")
+  const [cardHolderName, setCardHolderName] = useState("")
+  const [expDate, setExpDate] = useState("")
   const items = [
     { name: "Escape Oval sunglasses", price: 1399 },
     { name: "Escape Oval sunglasses", price: 549 },
@@ -13,6 +19,22 @@ export const Payment = () => {
   const estimatedTax = 50;
   const estimatedShipping = 29;
   const total = subtotal + estimatedTax + estimatedShipping;
+
+  const handleCvv = (e) => {
+    const inputValue = e.target.value;
+
+    if (inputValue === "" || !isNaN(inputValue)) {
+      setCvv(inputValue);
+    }
+  };
+
+  const handleCC = (e) => {
+    const inputValue = e.target.value;
+
+    if (inputValue === "" || !isNaN(inputValue)) {
+      setCardNumber(inputValue);
+    }
+  };
 
   return (
     <div className="flex gap-[5%]">
@@ -69,43 +91,61 @@ export const Payment = () => {
           ))}
         </div>
 
-          <div className="space-y-4">
-            {/* <div className="bg-black text-white p-4 rounded-lg flex flex-col items-center">
-              <p className="text-lg tracking-widest">4085 9536 8475 9530</p>
-              <p className="text-sm">Cardholder</p>
-            </div> */}
-            <img
-              src="https://w7.pngwing.com/pngs/836/850/png-transparent-credit-card-debit-card-mastercard-payment-card-credit-card-payment-internet-debit-card.png"
-              alt="Credit Card" />
+        <div className="mt-[2rem]">
 
-            <input
-              type="text"
-              placeholder="Cardholder Name"
-              className="w-full p-2 border rounded-lg"
+          <img
+            src="https://w7.pngwing.com/pngs/836/850/png-transparent-credit-card-debit-card-mastercard-payment-card-credit-card-payment-internet-debit-card.png"
+            alt="Credit Card"
+            className="mb-[2rem]" />
+          <Input
+            inputId="cardName"
+            placeholder="Cardholder Name"
+            inputClassName="white-bg-input"
+            value={cardHolderName}
+            handleChange={(e) => setCardHolderName(e.target.value)}
+          />
+          <Input
+            inputId="cardNumber"
+            placeholder="Card Number"
+            inputClassName="white-bg-input"
+            value={cardNumber}
+            handleChange={handleCC}
+          />
+          <div className="flex justify-between">
+            <Input
+              inputId="expDate"
+              placeholder="Exp.Date"
+              inputClassName="white-bg-input"
+              value={expDate}
+              handleChange={(e) => setExpDate(e.target.value)}
             />
-            <input
-              type="text"
-              placeholder="Card Number"
-              className="w-full p-2 border rounded-lg"
+            <Input
+              inputId="cvv"
+              maxLength={3}
+              placeholder="CVV"
+              inputClassName="white-bg-input"
+              value={cvv}
+              handleChange={handleCvv}
             />
-            <div className="flex space-x-2">
-              <input
-                type="text"
-                placeholder="Exp.Date"
-                className="w-1/2 p-2 border rounded-lg"
-              />
-              <input
-                type="password"
-                placeholder="CVV"
-                maxLength="3"
-                className="w-1/2 p-2 border rounded-lg"
-              />
-            </div>
-            <div className="flex items-center space-x-2">
-              <input type="checkbox" id="sameAddress" className="accent-black" />
-              <label htmlFor="sameAddress" className="text-sm">Same as billing address</label>
-            </div>
           </div>
+          <div className="flex items-center space-x-2 my-[3rem]">
+            <input type="checkbox" id="sameAddress" className="accent-black" />
+            <label htmlFor="sameAddress" className="text-sm">Same as billing address</label>
+          </div>
+          <div className="flex gap-4 justify-between my-[3rem]">
+            <Button
+              btnText="Back"
+              btnId="back-btn"
+              btnClassName="login-btn"
+              handleClick={handlePrevStep}
+            />
+            <Button
+              btnText="Pay"
+              btnId="pay-btn"
+              btnClassName="secondary-btn"
+            />
+          </div>
+        </div>
       </PaymentForm>
 
     </div>

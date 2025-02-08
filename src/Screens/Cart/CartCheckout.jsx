@@ -50,9 +50,11 @@ export const CartCheckout = ({ handleCheckOut }) => {
       <div className="flex-grow my-[1rem]">
         {currentStep === 0 && <Address />}
         {currentStep === 1 && <Shipping />}
-        {currentStep === 2 && <Payment />}
+        {currentStep === 2 && <Payment handlePrevStep={prevStep} />}
       </div>
 
+      { 
+      currentStep < 2 && 
       <div className="flex gap-4 justify-end">
         <Button
           btnText="Back"
@@ -61,12 +63,12 @@ export const CartCheckout = ({ handleCheckOut }) => {
           handleClick={prevStep}
         />
         <Button
-          btnText={currentStep===2?"Pay":"Next"}
+          btnText="Next"
           btnId="next-btn"
           btnClassName="secondary-btn max-w-[15%]"
           handleClick={nextStep}
         />
-      </div>
+      </div>}
     </div>
   );
 };

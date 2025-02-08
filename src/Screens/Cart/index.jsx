@@ -7,6 +7,8 @@ import { CartCheckout } from "./CartCheckout";
 
 export const Cart = () => {
   const [checkoutSelected, setCheckoutSelected] = useState(false);
+  const [discountCode, setDiscountCode] = useState("");
+  const [bonusCardNumber, setBonusCardNumber] = useState("");
   const cartItems = [
     {
       id: 1,
@@ -57,10 +59,13 @@ export const Cart = () => {
             Order Summary
           </div>
           <Input
-            inputId="username"
+            inputId="discountCode"
             placeholder="Code"
             text="Discount code / Promo code"
             inputClassName="white-bg-input"
+            value={discountCode}
+            handleChange={(e)=>setDiscountCode(e.target.value)}
+
           />
 
           <div className="font-inter text-left text-[#4b5869]">
@@ -71,6 +76,8 @@ export const Cart = () => {
               type="text"
               placeholder="Enter Card Number"
               className="card-number-input"
+              value={bonusCardNumber}
+              onChange={(e)=>setBonusCardNumber(e.target.value)}
             />
             <button className="text-sm applybutton">Apply</button>
           </div>
