@@ -1,11 +1,26 @@
 import { ChevronDown } from "lucide-react";
 import styled from "styled-components";
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const ShippingCard = styled.div``;
 
+const CustomInput = forwardRef(({ value, onClick }, ref) => (
+  <div
+    ref={ref}
+    onClick={onClick}
+    className="flex items-center cursor-pointer"
+  >
+    <span>{value || "Select Date"}</span>
+    <ChevronDown size={16} />
+  </div>
+));
+
+
 export const Shipping = () => {
   const [selected, setSelected] = useState("free");
+  const [date, setDate] = useState(null);
 
   const options = [
     {
@@ -28,6 +43,8 @@ export const Shipping = () => {
       icon: <ChevronDown size={16} />,
     },
   ];
+
+
 
   return (
     <div>
@@ -56,9 +73,21 @@ export const Shipping = () => {
                 <p className="text-sm">{option.subtitle}</p>
               </div>
             </div>
-            <div className="text-sm font-medium flex items-center">
-              {option.date} {option.icon}
-            </div>
+            {
+            option.date === "Select Date" ?
+              <DatePicker
+                selected={date}
+                onChange={(date) => setDate(date)}
+                dateFormat="d MMM, yyyy"
+                minDate={new Date()}
+                disabled={!(selected === option.id)}
+                customInput={<CustomInput className="text-sm" />} />
+              :
+              <div className="text-sm font-medium">
+                {option.date}
+              </div> 
+              }
+
           </ShippingCard>
         ))}
       </div>

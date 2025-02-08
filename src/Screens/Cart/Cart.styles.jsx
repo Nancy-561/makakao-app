@@ -38,3 +38,9 @@ export const OrderSummaryContainer = styled.div`
   }
 
 `;
+
+export const OrderSummary = styled.div`
+`;
+
+export const PaymentForm = styled.div`
+`;

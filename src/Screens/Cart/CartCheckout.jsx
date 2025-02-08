@@ -38,7 +38,7 @@ export const CartCheckout = ({ handleCheckOut }) => {
   };
 
   return (
-    <div className="mx-[12rem] my-[2rem]">
+    <div className="mx-[12rem] my-[2rem] font-poppins">
       <div className="flex items-center justify-between">
         {renderEachStep(currentStep, 1, "Address", <FaLocationDot />)}
         <div className="border-2 border-dashed border-gray min-w-[10rem]"></div>
@@ -61,7 +61,7 @@ export const CartCheckout = ({ handleCheckOut }) => {
           handleClick={prevStep}
         />
         <Button
-          btnText="Next"
+          btnText={currentStep===2?"Pay":"Next"}
           btnId="next-btn"
           btnClassName="secondary-btn max-w-[15%]"
           handleClick={nextStep}

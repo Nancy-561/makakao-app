@@ -45,7 +45,7 @@ export const Cart = () => {
     return <CartCheckout handleCheckOut={handleCheckOut}/>;
   } else {
     return (
-      <div className="flex justify-center gap-[4rem] m-[2rem]">
+      <div className="font-poppins flex justify-center gap-[4rem] m-[2rem]">
         <CartList>
           <div className="text-[1.5rem] font-bold text-left">Shopping Cart</div>
           {cartItems.map((item) => (
