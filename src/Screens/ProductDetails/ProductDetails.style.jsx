@@ -20,7 +20,7 @@ export const StyledContainer = styled.div`
   .heading {
     font-size: 19px;
     line-height: 24px;
-    font-size: 500;
+    font-weight: 500;
     color: #000000;
   }
 
@@ -71,6 +71,23 @@ export const StyledContainer = styled.div`
         color: #8b96a5;
         text-decoration: line-through;
       }
+    }
+  }
+  .bid-popup {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    .content-container {
+      position: absolute;
+      padding: 2rem;
+      height: 40vh;
+      z-index: 100;
+      width: 40vw;
+      background: white;
     }
   }
 `;

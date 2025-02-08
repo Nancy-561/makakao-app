@@ -44,6 +44,18 @@ export const HeaderWrapper = styled.header`
     font-size: 16px;
     font-weight: 500;
   }
+
+  .account-options {
+    border: 1px solid #0000001a;
+    position: absolute;
+    top: 50px;
+    right: 32px;
+    z-index: 10;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+  }
 `;
 
 export const Nav = styled.nav`

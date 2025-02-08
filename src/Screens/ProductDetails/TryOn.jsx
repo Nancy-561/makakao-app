@@ -1,14 +1,65 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaCamera } from "react-icons/fa";
+import { RiCloseCircleFill } from "react-icons/ri";
 import { IoIosHeart, IoIosHeartEmpty } from "react-icons/io";
 
+import { formatPrice } from "./";
 import { Button } from "../../Components/Button";
 import { Carousel } from "../../Components/Carousel";
 
-export const TryOn = ({ images }) => {
-  const [wishlisted, setWishlisted] = useState(false);
-
-  return (
+export const TryOn = ({
+  images,
+  showTryOn,
+  setShowTryOn,
+  price,
+  name,
+  wishlisted,
+  setWishlisted,
+  setShowBidPopup
+}) => {
+  return showTryOn ? (
+    <div className="relative overflow-hidden">
+      <img
+        src="/try-on.png"
+        alt="tryOn-img"
+        className="w-[-webkit-fill-available]"
+      />
+      <RiCloseCircleFill
+        size={38}
+        className="absolute top-[24px] left-[24px]"
+        onClick={setShowTryOn}
+      />
+      <div className="absolute bottom-[100px]">
+        <div className="flex gap-4 overflow-scroll text-left">
+          {[...Array(8)].map((_, index) => (
+            <div className="new-product-card font-inter flex-shrink-0 relative">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/fddd/e678/6503d847a818175bab19d30538dafd4b?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=KIBDinYmoS2AjBPFixZtpEr7ENNOnNqUtIb8sFqYJdmE4xfhp90bl7jAM-E9G5pHOF8sSE8W1LEEQ2KGV6ArZ~UFr~Xrvh-UDaqgx9Ags6jYHdaAxd4qGN4QCCKUics~7HAnOq2KUm6CN6Uj84GijWyorFy6h6JwGWz04ZRfz0jt7yMPgxq1FZ-2ki0IXPTnGsOjOyWoLcBszuji53qeQP9DA0aeVNaVNAOMxxTgosu8uuU9BN0HHp6XK170o77~k24W~td6lJRMhxEx4AZ2m6oQpc52XZPmLCVUxqPTc5r~tq425BJpU435aq1kwVxQAScKqhr--RM2gNFTWJPlMg__"
+                alt={`new-img${index}`}
+                className="h-[60px] my-4 mx-2 w-[-webkit-fill-available]"
+              />
+              <div className="absolute right-[6px] top-[6px] text-[#F6585C]">
+                <IoIosHeart size={20} />
+              </div>
+              <div className="new-product-info px-2 py-2">
+                <div className="text-[10px] leading-[15px] text-[#606060] font-medium">
+                  {name}
+                </div>
+                <div className="flex gap-2 items-center mt-2">
+                  <Button
+                    btnId="try-now-btn"
+                    btnText="Try now"
+                    btnClassName="try-now-btn px-2"
+                  />
+                  <span className="price-info">${formatPrice(price)} </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  ) : (
     <div className="flex flex-col">
       <div className="relative img-container w-full h-[50vh]">
         <Carousel
@@ -35,6 +86,7 @@ export const TryOn = ({ images }) => {
             </>
           }
           btnClassName="left-1/2 -translate-x-1/2 try-on-btn"
+          handleClick={setShowTryOn}
         />
         <div className="absolute right-[24px] top-[24px] text-[#F6585C]">
           {wishlisted ? (
@@ -55,6 +107,7 @@ export const TryOn = ({ images }) => {
           btnId="place-bid-btn"
           btnText="Place Bid"
           btnClassName="action-btn bg-navy-btn"
+          handleClick={setShowBidPopup}
         />
       </div>
       <img

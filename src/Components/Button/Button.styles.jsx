@@ -47,7 +47,7 @@ export const StyledButton = styled.button`
   }
 
   &.try-on-btn {
-    background: linear-gradient(96.02deg, #026080 4.2%, #FF9017 112.39%);
+    background: linear-gradient(96.02deg, #026080 4.2%, #ff9017 112.39%);
     width: max-content;
     border-radius: 12px;
     font-size: 19px;
@@ -58,9 +58,37 @@ export const StyledButton = styled.button`
   }
 
   &.share-btn {
-    color: #FF9017;
+    color: #ff9017;
     width: max-content;
     background: white;
     padding: 10px;
+  }
+
+  &.subscribe-btn {
+    width: max-content;
+    height: fit-content;
+    background-color: #2d313e;
+  }
+
+  &.inquire-btn {
+    background-color: white;
+    color: #4285f4;
+    border-radius: 18px;
+    width: max-content;
+  }
+
+  &.try-now-btn {
+    line-height: 12px;
+    font-size: 10px;
+    width: max-content;
+    border-radius: 14px;
+    background-color: #026080;
+  }
+
+  &.cancel-btn {
+    background-color: white;
+    color: #4285f4;
+    border-radius: 18px;
+    border: 1px solid #4285f4;
   }
 `;
