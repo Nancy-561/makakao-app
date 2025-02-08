@@ -92,9 +92,8 @@ export const Payment = ({ handlePrevStep }) => {
         </div>
 
         <div className="mt-[2rem]">
-
           <img
-            src="https://w7.pngwing.com/pngs/836/850/png-transparent-credit-card-debit-card-mastercard-payment-card-credit-card-payment-internet-debit-card.png"
+            src="/card.png"
             alt="Credit Card"
             className="mb-[2rem]" />
           <Input
@@ -111,7 +110,7 @@ export const Payment = ({ handlePrevStep }) => {
             value={cardNumber}
             handleChange={handleCC}
           />
-          <div className="flex justify-between">
+          <div className="grid grid-cols-2 gap-4">
             <Input
               inputId="expDate"
               placeholder="Exp.Date"

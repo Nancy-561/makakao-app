@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaLock } from "react-icons/fa";
+import { FaCamera } from "react-icons/fa";
 
 export const StyledAccountContainer = styled.div`
   border-right: 1px solid lightgray; 
@@ -66,14 +66,14 @@ export const ProfileHeader = styled.div`
   position: relative;
 `;
 
-export const LockIcon = styled(FaLock)`
+export const CameraIcon = styled(FaCamera)`
   position: absolute;
-  bottom: 5px;
-  right: 5px;
-  background: #fff;
+  bottom: 10px;
+  right: 10px;
+  color: #4285f4;
+  background: white;
   border-radius: 50%;
   padding: 3px;
-  color: #555;
 `;
 
 export const InputContainer = styled.div`
@@ -85,11 +85,10 @@ export const InputContainer = styled.div`
 
 
 export const Select = styled.select`
-  background: #f3f4f6;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
+  background: #eef1f5;
+  padding: 8px;
   width: 100%;
+  margin-top: 8px;
 `;
 
 

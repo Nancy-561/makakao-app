@@ -90,6 +90,12 @@ export const StyledContainer = styled.div`
       background: white;
     }
   }
+
+  .try-on-container {
+    height: max-content;
+    position: relative;
+    overflow: hidden;
+  }
 `;
 
 export const Rating = styled.div`

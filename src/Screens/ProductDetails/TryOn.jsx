@@ -18,7 +18,7 @@ export const TryOn = ({
   setShowBidPopup
 }) => {
   return showTryOn ? (
-    <div className="relative overflow-hidden">
+    <div className="try-on-container">
       <img
         src="/try-on.png"
         alt="tryOn-img"
@@ -29,7 +29,7 @@ export const TryOn = ({
         className="absolute top-[24px] left-[24px]"
         onClick={setShowTryOn}
       />
-      <div className="absolute bottom-[100px]">
+      <div className="absolute bottom-[10px]">
         <div className="flex gap-4 overflow-scroll text-left">
           {[...Array(8)].map((_, index) => (
             <div className="new-product-card font-inter flex-shrink-0 relative">

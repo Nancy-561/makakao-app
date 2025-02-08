@@ -49,6 +49,7 @@ export const ProductDetails = () => {
               btnId="place-bid-btn"
               btnText="Place Bid"
               btnClassName="action-btn bg-navy-btn"
+              handleClick={() => setShowBidPopup(true)}
             />
           </div>
         ) : (
