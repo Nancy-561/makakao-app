@@ -1,26 +1,12 @@
+import React, { useState, useRef } from "react";
 import { ChevronDown } from "lucide-react";
-import styled from "styled-components";
-import React, { useState, forwardRef } from "react";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 
-const ShippingCard = styled.div``;
-
-const CustomInput = forwardRef(({ value, onClick }, ref) => (
-  <div
-    ref={ref}
-    onClick={onClick}
-    className="flex items-center cursor-pointer"
-  >
-    <span>{value || "Select Date"}</span>
-    <ChevronDown size={16} />
-  </div>
-));
-
+import { ShippingCard } from "./Cart.styles";
 
 export const Shipping = () => {
+  const inputRef = useRef(null);
   const [selected, setSelected] = useState("free");
-  const [date, setDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState("");
 
   const options = [
     {
@@ -44,7 +30,23 @@ export const Shipping = () => {
     },
   ];
 
+  const formatDate = (dateString) => {
+    if (!dateString) return "";
+    const date = new Date(dateString);
+    return date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+  };
 
+  const handleDateChange = (event) => {
+    setSelectedDate(event.target.value);
+  };
+
+  const openDateSelector = () => {
+    inputRef.current?.showPicker();
+  };
 
   return (
     <div>
@@ -73,21 +75,24 @@ export const Shipping = () => {
                 <p className="text-sm">{option.subtitle}</p>
               </div>
             </div>
-            {
-            option.date === "Select Date" ?
-              <DatePicker
-                selected={date}
-                onChange={(date) => setDate(date)}
-                dateFormat="d MMM, yyyy"
-                minDate={new Date()}
-                disabled={!(selected === option.id)}
-                customInput={<CustomInput className="text-sm" />} />
-              :
-              <div className="text-sm font-medium">
-                {option.date}
-              </div> 
-              }
-
+            {option.date === "Select Date" ? (
+              <div>
+                <label onClick={openDateSelector}>
+                  <span className="text-sm font-medium flex items-center">
+                    {formatDate(selectedDate) || "Select Date"}
+                    {selectedDate ? "" : <ChevronDown size={16} className="ml-2" />}
+                  </span>
+                </label>
+                <input
+                  ref={inputRef}
+                  type="date"
+                  onChange={handleDateChange}
+                  className="hidden-date-input"
+                />
+              </div>
+            ) : (
+              <div className="text-sm font-medium">{option.date}</div>
+            )}
           </ShippingCard>
         ))}
       </div>
