@@ -84,10 +84,10 @@ export const StyledContainer = styled.div`
     .content-container {
       position: absolute;
       padding: 2rem;
-      height: 40vh;
       z-index: 100;
-      width: 40vw;
+      width: 60vw;
       background: white;
+      border-radius: 14px;
     }
   }
 

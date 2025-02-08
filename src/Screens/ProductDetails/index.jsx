@@ -7,6 +7,7 @@ import { ProductInfo } from "./ProductInfo";
 import { DetailsAndDesc } from "./DetailsAndDesc";
 import { Button } from "../../Components/Button";
 import { StyledContainer, Rating, Star } from "./ProductDetails.style";
+import { ProductBiddingModel } from "../ProductBiddingModel";
 
 export const formatPrice = (value) => {
   if (isNaN(value)) return "0.00";
@@ -107,7 +108,9 @@ export const ProductDetails = () => {
       </div>
       {showBidPopup && (
         <div className="bid-popup" onClick={() => setShowBidPopup(false)}>
-          <div className="content-container left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+          <div className="content-container left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-custom"  onClick={e=>e.stopPropagation()}>
+            <ProductBiddingModel setShowBidPopup={() => setShowBidPopup(false)}  />
+          </div>
         </div>
       )}
     </StyledContainer>

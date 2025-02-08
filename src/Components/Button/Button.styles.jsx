@@ -91,4 +91,10 @@ export const StyledButton = styled.button`
     border-radius: 18px;
     border: 1px solid #4285f4;
   }
+  &.bid-btn {
+    width: max-content;
+    height: fit-content;
+    background-color: #000000;
+    padding: 7px 80px;
+  }
 `;
